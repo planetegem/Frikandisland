@@ -1,10 +1,13 @@
-This is a small tool that I will use when developing my next game, Frikandisland.
+This depository will contain the source code for my next game, Frikandisland.
 
-The tool has 3 purposes:
+1. Goals
+- The intention is for Frikandisland to become a survival game with very similar mechanics as Forager. The player will start on a small portion of the map, where resources will spawn randomly. The player needs to forage these resources to progress.
+- By progressing in the game, new parts of the map are unlocked. 
+- The map is procedurally generated: no 2 players will have the same map.
+- The map consists of biomes which are impacted by the player's behavior. For example: grasslands become desert if they are overfarmed.
+- The game is played from an isometric perspective, but uses true 3D. For this, the MonoGame library is used.
 
-1) Load in models and check them for errors in rotation and/or scaling. Models will most likely be made in Blender. The floor consists of tiles that are 1m x1m in Blender (for comparison). Models should be exported with Z-Axis upwards and point of origin at Z = 0.
-2) Test animations and see how they interact with controls. For animations, I'll most likely be using the Aether.Extras library.
-3) Check collision detection and determine size of bounding circle. Frikandisland will be a 3D game, but all movement will take place on a 2D plain. As such, I only need to test collision detection on that 2D plain. For collision detection, entities will be defined by one or more bounding circle. The bounding circles are scaled and positioned to match the model as closesly/logically as possible. The tool gives you a minimap that shows the 2D plain (where the actual collision detection is taking place) and a preview of the bounding circles on the 3D model.
+2. Parts
+- Aether.Extras adds support for animated models
+- EntityFactory is a continuation of this project: https://github.com/planetegem/MonoGame3DPlayground. This is where I can test movement mechanics, 3D models & animations, and their hitboxes.
 
-To inspect the scene, you can drag the mouse to rotate the camera; mouse wheel gives you a zoom function and the arrow keys are used to interact with the player model.
-As I start working on Frikandisland, I will be adding extensions of the BasicEntity class for every entity I add to the game (player models, enemies, structures, etc).
