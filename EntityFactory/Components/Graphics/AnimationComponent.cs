@@ -6,6 +6,8 @@ using System;
 
 namespace EntityFactory.Components.Graphics
 {
+    // AnimationComponent is constructed by AnimatedModel (extension of RenderComponent)
+    // Responsible for updating bone positions on model
     internal class AnimationComponent : Component
     {
         private Model model;
@@ -18,10 +20,11 @@ namespace EntityFactory.Components.Graphics
         public AnimationComponent(Entity parent, Model model) : base(parent)
         {
             this.model = model;
+            this.animations = model.GetAnimations();
         }
+
         public void SetAnimation(string animationName)
         {
-            animations = model.GetAnimations();
             var clip = animations.Clips[animationName];
             animations.SetClip(clip);
         }

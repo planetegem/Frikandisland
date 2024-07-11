@@ -1,5 +1,10 @@
-﻿namespace EntityFactory.Entities
+﻿using EntityFactory.Systems;
+using System;
+
+namespace EntityFactory.Entities
 {
+    // Entity state is currently tracked in the entity itself because of laziness
+    // Later on, this will probably be moved to a component specialized in tracking state
     public enum EntityStates
     {
         idle = 0,
@@ -14,7 +19,15 @@
 
         public Entity(string id, EntityStates state = default(EntityStates))
         {
-            this.id = id;
+            try
+            {
+                this.id = id + EntityLoader.EntityCount;
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine(e);
+                this.id = id;
+            }
             this.state = state;
         }
     }

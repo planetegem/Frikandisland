@@ -7,7 +7,6 @@ using EntityFactory.Components.Bounding;
 
 namespace EntityFactory.Components.Graphics
 {
-    // RenderComponent is responsible for 
     internal abstract class RenderComponent : Component
     {
         // Model & Texture

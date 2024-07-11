@@ -1,10 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Graphics;
 using EntityFactory.Components;
-
-using System;
-using System.Collections.Generic;
 using EntityFactory.Components.Bounding;
 using EntityFactory.Components.Graphics;
 
@@ -30,21 +25,5 @@ namespace EntityFactory.Entities
             StaticModel renderer = new StaticModel(this, positioner, "percolator");
 
         }
-
-        public void Load(ContentManager cm)
-        {
-            try
-            {
-                Model model = cm.Load<Model>("models/percolator");
-                //this.render = new SimpleModel(this, model);
-            }
-            catch (Exception e) { System.Diagnostics.Debug.WriteLine(e.Message);}
-        }
-        public  void Update(GameTime gt, List<BoundingArea> neighbours)
-        {
-           
-
-        }
-
     }
 }

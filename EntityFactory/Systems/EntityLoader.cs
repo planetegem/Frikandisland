@@ -11,7 +11,20 @@ namespace EntityFactory.Systems
     internal sealed class EntityLoader
     {
         // Save ContentManager during construction
-        ContentManager cm;
+        private ContentManager cm;
+
+        // Count amount of entities created (part of naming scheme)
+        private int entityCount = 0;
+        public static int EntityCount
+        {
+            get
+            {
+                if (instance == null)
+                    throw new Exception("EntityLoader was not instantiated when creating entity");
+                instance.entityCount++;
+                return instance.entityCount;
+            }
+        }
 
         // Constructor is private to hide it
         private EntityLoader(ContentManager cm)

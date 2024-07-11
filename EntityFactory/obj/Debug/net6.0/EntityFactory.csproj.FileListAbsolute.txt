@@ -176,3 +176,4 @@ C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFac
 C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\obj\Debug\net6.0\EntityFactory.csproj.CopyComplete
 C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\obj\Debug\net6.0\EntityFactory.genruntimeconfig.cache
 C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\obj\Debug\net6.0\ref\EntityFactory.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\obj\Debug\net6.0\EntityFactory.sourcelink.json

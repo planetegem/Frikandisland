@@ -36,6 +36,12 @@ namespace EntityFactory.Components.Bounding
         public Vector2 ProposedPosition { get; set; }
         public float ProposedAngle { get; set; }
 
+        public void Resolve()
+        {
+            position = ProposedPosition;
+            Angle = ProposedAngle;
+        }
+
         // Multiple constructors possible:
         // 1. No positioning, everything to default
         public PositionComponent(Entity parent) : base(parent)

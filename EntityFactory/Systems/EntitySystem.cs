@@ -18,6 +18,7 @@ namespace EntityFactory.Systems
             animationComponents = new List<AnimationComponent>();
             inputComponents = new List<InputComponent>();
             boundingComponents = new List<BoundingComponent>();
+            positionComponents = new List<PositionComponent>();
         }
 
         // Instance property & padlock for thread safety
@@ -43,6 +44,7 @@ namespace EntityFactory.Systems
         private List<AnimationComponent> animationComponents;
         private List<InputComponent> inputComponents;
         private List<BoundingComponent> boundingComponents;
+        private List<PositionComponent> positionComponents;
 
         public static void RegisterComponent(Component[] components)
         {
@@ -67,6 +69,8 @@ namespace EntityFactory.Systems
                 instance.inputComponents.Add((InputComponent)component);
             if (component is BoundingComponent)
                 instance.boundingComponents.Add((BoundingComponent)component);
+            if (component is PositionComponent)
+                instance.positionComponents.Add((PositionComponent)component);
         }
 
         // Phase 1: input components propose changes to position components
@@ -93,6 +97,7 @@ namespace EntityFactory.Systems
             if (instance is null)
                 throw new Exception("Invalid instance of EntitySystem: set instance of EntitySystem during game start");
 
+            // First check all bounding components
             foreach (BoundingComponent component in instance.boundingComponents)
             {
                 try
@@ -103,6 +108,11 @@ namespace EntityFactory.Systems
                 {
                     System.Diagnostics.Debug.WriteLine($"Error on entity {component.getParentId()}: {e}");
                 }
+            }
+            // Next go through all position components and resolve proposed changes as well (for entities without bounding component)
+            foreach (PositionComponent component in instance.positionComponents)
+            {
+                component.Resolve();
             }
 
         }
