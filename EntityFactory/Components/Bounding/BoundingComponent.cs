@@ -53,13 +53,12 @@ namespace EntityFactory.Components.Bounding
             // Amend ProposedPosition based on collision results
             Vector2 newPos = new Vector2(newX, newY);
             positioner.ProposedPosition = newPos;
-            positioner.Position = newPos;
 
             // Attempt rotation
             float newAngle = positioner.ProposedAngle;
             foreach (BoundingArea bBox in bounds)
             {
-                bBox.UpdatePosition(newAngle, positioner.Position);
+                bBox.UpdatePosition(newAngle, newPos);
                 if (bBox.DetectCollision(neighbours))
                 {
                     newAngle = positioner.Angle;
@@ -69,9 +68,8 @@ namespace EntityFactory.Components.Bounding
 
             // Amend ProposedAngle
             positioner.ProposedAngle = newAngle;
-            positioner.Angle = newAngle;
 
-            // Resolve everything
+            // Finalize updated position on bounds
             foreach (BoundingArea bBox in bounds)
             {
                 bBox.UpdatePosition(newAngle, newPos);

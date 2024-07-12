@@ -112,7 +112,7 @@ namespace EntityFactory.Systems
             // Next go through all position components and resolve proposed changes as well (for entities without bounding component)
             foreach (PositionComponent component in instance.positionComponents)
             {
-                component.Resolve();
+                component.ResolvePosition();
             }
 
         }
