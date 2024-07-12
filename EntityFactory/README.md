@@ -11,9 +11,9 @@ Frikandisland makes use of the ECS (Entity - Component - System) design pattern.
 3) Systems, which track all currently active components and sorts them into categories. It can then execute all components of the same type in one go (for example: instruct all render components to draw their 3D models) without having to know anything about the entities that constructed them. 
 
 
-<u>Creating Entities</u>
+<b>Creating Entities</b>
 To create an entity, you can extend the abstract Entity class Entity. This provides your entity with some basic logic, such as an id field. The id field consists of the name of your entity (passed in the constructor) and an entity count (extracted from the EntityLoader system). The Entity class also holds a field to track entity state.
-Other than that, you only need to write a constructor for your new entity. In this constructor you can create components à la carte. Some components require other components (for example: you can't have a render component without a position component).
+Other than that, you only need to write a constructor for your new entity. In this constructor you can create components Ã  la carte. Some components require other components (for example: you can't have a render component without a position component).
 
 
 <u>Types of Components</u>
