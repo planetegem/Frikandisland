@@ -17,19 +17,16 @@ Other than that, you only need to write a constructor for your new entity. In th
 
 <b><< TYPES OF COMPONENTS >></b>
 
-Every component is an extension of the abstract Component class. As such, every component inherits the constructor of this class, which:
-- registers the component with the EntitySystem
-- and tracks the entity that constructed it (just as a safety, should rarely be used)
+Every component is an extension of the abstract Component class. As such, every component inherits the constructor of this class, which registers the component with the EntitySystem, and tracks the entity that constructed it (as a safety, should rarely be used).
 
-  The <b>PositionComponent</b> is a basic component that stores coordinates, rotation and momentum. It also stores proposed changes to these values (to be reconciled after collision detection). Almost every entity should have a PositionComponent, but it's possible to imagine an entity that doesn't need to track its position (for example an abstract entity that doesn't need to be rendered).
-  The <b>InputComponent</b> suggests changes to the PositionComponent. Currently, there is only 1 concrete InputComponent: the SimpleKeyboard component, which takes simple keyboard commands to suggest changes to position. Later on, there will also be room for more complex player inputs, or AI inputs. The SimpleKeyboard component also holds a method to finetune movement mechanics (rate of acceleration, turning circle, etc).
-  The <b>BoundingComponent</b> tracks bounding boxes relative to a PositionComponent. It uses these bounding boxes to perform collision detection and amend proposed changes to the PositionComponent.
-The BoundingComponent also holds a method to render the bounding boxes during debug. 
-The <b>RenderComponent</b> holds all render logic. It offers support for 3D models, with or without textures. In case of shader failure, there are also some base lighting settings built into the component as a fallback. There are currently 3 RenderComponents to choose from:
+1) The <b>PositionComponent</b> is a basic component that stores coordinates, rotation and momentum. It also stores proposed changes to these values (to be reconciled after collision detection). Almost every entity should have a PositionComponent, but it's possible to imagine an entity that doesn't need to track its position (for example an abstract entity that doesn't need to be rendered).
+2) The <b>InputComponent</b> suggests changes to the PositionComponent. Currently, there is only 1 concrete InputComponent: the SimpleKeyboard component, which takes simple keyboard commands to suggest changes to position. Later on, there will also be room for more complex player inputs, or AI inputs. The SimpleKeyboard component also holds a method to finetune movement mechanics (rate of acceleration, turning circle, etc).
+3) The <b>BoundingComponent</b> tracks bounding boxes relative to a PositionComponent. It uses these bounding boxes to perform collision detection and amend proposed changes to the PositionComponent. The BoundingComponent also holds a method to render the bounding boxes during debug. 
+4) The <b>RenderComponent</b> holds all render logic. It offers support for 3D models, with or without textures. In case of shader failure, there are also some base lighting settings built into the component as a fallback. There are currently 3 RenderComponents to choose from:
 - SimpleModel: very basic render component with no shader & no textures. Only used for testing.
 - StaticModel: a model with no animations (pipeline builds it as a simple 3D model) 
 - AnimatedModel: 3D model with support for animations. Automatically constructs an AnimationComponent as well.
-The <b>AnimationComponent</b> updates bone positions in the 3D model of a RenderComponent.
+5) The <b>AnimationComponent</b> updates bone positions in the 3D model of a RenderComponent.
 
 
 <u>Understanding the EntitySystem</u>
