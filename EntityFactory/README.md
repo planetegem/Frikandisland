@@ -23,13 +23,14 @@ Every component is an extension of the abstract Component class. As such, every 
 2) The <b>InputComponent</b> suggests changes to the PositionComponent. Currently, there is only 1 concrete InputComponent: the SimpleKeyboard component, which takes simple keyboard commands to suggest changes to position. Later on, there will also be room for more complex player inputs, or AI inputs. The SimpleKeyboard component also holds a method to finetune movement mechanics (rate of acceleration, turning circle, etc).
 3) The <b>BoundingComponent</b> tracks bounding boxes relative to a PositionComponent. It uses these bounding boxes to perform collision detection and amend proposed changes to the PositionComponent. The BoundingComponent also holds a method to render the bounding boxes during debug. 
 4) The <b>RenderComponent</b> holds all render logic. It offers support for 3D models, with or without textures. In case of shader failure, there are also some base lighting settings built into the component as a fallback. There are currently 3 RenderComponents to choose from:
-- SimpleModel: very basic render component with no shader & no textures. Only used for testing.
-- StaticModel: a model with no animations (pipeline builds it as a simple 3D model) 
-- AnimatedModel: 3D model with support for animations. Automatically constructs an AnimationComponent as well.
+  - SimpleModel: very basic render component with no shader & no textures. Only used for testing.
+  - StaticModel: a model with no animations (pipeline builds it as a simple 3D model) 
+  - AnimatedModel: 3D model with support for animations. Automatically constructs an AnimationComponent as well.
 5) The <b>AnimationComponent</b> updates bone positions in the 3D model of a RenderComponent.
 
 
-<u>Understanding the EntitySystem</u>
+<b><< UNDERSTANDING THE ENTITYSYSTEM >></b>
+
 The EntitySystem decides when a component can execute its logic. It makes use of the Singleton design pattern to make it accessible from anywhere in the program.
 When a component is registered, the EntitySystem performs a type check on the component and then sorts the component into lists of similar components. Next, it executes the logic of the components in phases:
 1) Execute InputComponents (who may or may not propose updates to PositionComponents)
@@ -41,14 +42,17 @@ When a component is registered, the EntitySystem performs a type check on the co
 Currently, this is all one class, but it is not unlikely that I'll separate this logic into multiple systems later on.
 
 
-<u>Understanding the EntityLoader</u>
+<b><< UNDERSTANDING THE ENTITYLOADER >></b>
+
 The EntityLoader is another Singleton, making it available anywhere in the program. It is solely responsible for loading assets from the pipeline (i.e. models, textures, shaders, etc). Simply put, it's a way of preloading assets and making the Monogame ContentManager quickly available.
 
 
-<u>Creating and loading models</u>
+<b><< CREATING & LOADING MODELS >></b>
+
 The game supports models (both static and animated) in fbx format. These can be made in Blender. The be able to compare sizes: the floor consists of tiles that are 1x1m in Blender. Models are recommended it fit on 1 tile at most. Models should be exported with the Z-axis upwards and point of origin at z = 0. If the origin point is not at z = 0), you can manually add a z-offset to a PositionComponent. 
 Support for animated fbx models has been made possible with Aether.Extras (see the Aether.Extras folder for full credits).
 
 
-<u>About the collision detection</u>
+<b><< ABOUT COLLISION DETECTION >></b>
+
 The game will be 3D, but all movement will take place on a 2D plane (isometric). As such, 2D collision detection is more than sufficient. All logic for this is contained within the BoundingArea class and its extensions. Currently supports collision detection with circles and axis-aligned rectangles, but will integrate SAT collision detection to allow a wide variety of polygons.
