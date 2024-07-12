@@ -10,14 +10,10 @@ Frikandisland makes use of the ECS (Entity - Component - System) design pattern.
 2) Components, which hold all of the main game logic. When a component is constructed, it automatically registers itself with the System
 3) Systems, which track all currently active components and sorts them into categories. It can then execute all components of the same type in one go (for example: instruct all render components to draw their 3D models) without having to know anything about the entities that constructed them. 
 
-
-
 <b><< CREATING ENTITIES >></b>
 
 To create an entity, you can extend the abstract Entity class Entity. This provides your entity with some basic logic, such as an id field. The id field consists of the name of your entity (passed in the constructor) and an entity count (extracted from the EntityLoader system). The Entity class also holds a field to track entity state.
 Other than that, you only need to write a constructor for your new entity. In this constructor you can create components à la carte. Some components require other components (for example: you can't have a render component without a position component).
-
-
 
 <b><< TYPES OF COMPONENTS >></b>
 
@@ -25,9 +21,9 @@ Every component is an extension of the abstract Component class. As such, every 
 - registers the component with the EntitySystem
 - and tracks the entity that constructed it (just as a safety, should rarely be used)
 
-The <b>PositionComponent</b> is a basic component that stores coordinates, rotation and momentum. It also stores proposed changes to these values (to be reconciled after collision detection). Almost every entity should have a PositionComponent, but it's possible to imagine an entity that doesn't need to track its position (for example an abstract entity that doesn't need to be rendered).
-The <b>InputComponent</b> suggests changes to the PositionComponent. Currently, there is only 1 concrete InputComponent: the SimpleKeyboard component, which takes simple keyboard commands to suggest changes to position. Later on, there will also be room for more complex player inputs, or AI inputs. The SimpleKeyboard component also holds a method to finetune movement mechanics (rate of acceleration, turning circle, etc).
-The <b>BoundingComponent</b> tracks bounding boxes relative to a PositionComponent. It uses these bounding boxes to perform collision detection and amend proposed changes to the PositionComponent.
+  The <b>PositionComponent</b> is a basic component that stores coordinates, rotation and momentum. It also stores proposed changes to these values (to be reconciled after collision detection). Almost every entity should have a PositionComponent, but it's possible to imagine an entity that doesn't need to track its position (for example an abstract entity that doesn't need to be rendered).
+  The <b>InputComponent</b> suggests changes to the PositionComponent. Currently, there is only 1 concrete InputComponent: the SimpleKeyboard component, which takes simple keyboard commands to suggest changes to position. Later on, there will also be room for more complex player inputs, or AI inputs. The SimpleKeyboard component also holds a method to finetune movement mechanics (rate of acceleration, turning circle, etc).
+  The <b>BoundingComponent</b> tracks bounding boxes relative to a PositionComponent. It uses these bounding boxes to perform collision detection and amend proposed changes to the PositionComponent.
 The BoundingComponent also holds a method to render the bounding boxes during debug. 
 The <b>RenderComponent</b> holds all render logic. It offers support for 3D models, with or without textures. In case of shader failure, there are also some base lighting settings built into the component as a fallback. There are currently 3 RenderComponents to choose from:
 - SimpleModel: very basic render component with no shader & no textures. Only used for testing.
