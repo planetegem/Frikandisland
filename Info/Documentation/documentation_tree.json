@@ -1,0 +1,46 @@
+{
+    "name": "documentation_tree",
+    "depth": 0,
+    "tree": [
+        {
+            "name": "EntityFactory",
+            "depth": 1,
+            "children": [
+                {
+                    "name": "Entity",
+                    "depth": 2,
+                    "children": [
+
+                    ]
+                }
+                ,
+                {
+                    "name": "Component",
+                    "depth": 2,
+                    "children": [
+                        {
+                            "name": "InputComponent",
+                            "depth": 3,
+                            "children": [
+
+                            ]
+                        }
+                    ]
+                }
+                ,
+                {
+                    "name": "System",
+                    "depth": 2,
+                    "children": [
+
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "AssetLoader",
+            "depth": 1,
+            "children": []
+        }
+    ]
+}
