@@ -1,6 +1,7 @@
 ﻿using EntityFactory.Components;
 using EntityFactory.Components.Bounding;
 using EntityFactory.Components.Graphics;
+using EntityFactory.Components.Input;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;

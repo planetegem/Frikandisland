@@ -132,15 +132,16 @@ main {
 }
 h3, h4 {
     display: block;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.75em;
     font-weight: bold;
     
 }
 h3 {
     font-size: 1.35em;
+    margin-top: 1.5em;
 }
 h4 {
+    margin-top: 2em;
     font-size: 1.1em;
     color:#3a3a3a;
 }
@@ -149,14 +150,14 @@ p {
     margin-bottom: 1em;
     line-height: 1.25em;
 }
-a  {
+article a  {
     color: var(--themeColor2);
 }
-a:hover {
+article a:hover {
     cursor: pointer;
     text-decoration: underline;
 }
-a:active {
+article a:active {
     color: red;
 }
 main article img {
@@ -172,6 +173,32 @@ main span {
     line-height: 1.4em;
     margin-bottom: 3em;
 }
+main article table {
+    width: 95%;
+    margin: auto;   
+}
+main article th {
+    font-weight:100;
+    text-decoration: underline;
+    text-align: right;
+    vertical-align: text-top;
+}
+main article td {
+    text-align: left;
+    vertical-align: text-top;
+    padding-left: 0.5em;
+    padding-bottom: 0.5em;
+}
+@media only screen and (min-width: 850px) {
+    main article table {
+        width: 90%;
+    }
+}
+article .small {
+    width: 60%;
+    margin: auto;
+}
+
 
 /* Navigation */
 nav {
@@ -204,6 +231,7 @@ li {
 }
 li:hover {
     filter: brightness(100%);
+    cursor: pointer;
 }
 li img {
     height: 0.6em;

@@ -1,13 +1,12 @@
 ﻿using Microsoft.Xna.Framework;
-using EntityFactory.Components;
 using EntityFactory.Components.Bounding;
 using EntityFactory.Components.Graphics;
+using EntityFactory.Components.Input;
 
 namespace EntityFactory.Entities
 {
     internal class Percolator : Entity
     {
-
         public Percolator(float x = 0f, float y = 0f): base("percolator")
         {
             // Step 1: set position component
@@ -22,7 +21,7 @@ namespace EntityFactory.Entities
             SimpleKeyboard inputer = new SimpleKeyboard(this, positioner);
 
             // Step 3: renderer
-            StaticModel renderer = new StaticModel(this, positioner, "percolator");
+            SimpleModel renderer = new SimpleModel(this, positioner, "percolator");
 
         }
     }

@@ -1,27 +1,20 @@
 ﻿using EntityFactory.Components.Bounding;
 using EntityFactory.Entities;
-using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace EntityFactory.Components
+namespace EntityFactory.Components.Input
 {
-    // Process input, either player or AI
-    internal abstract class InputComponent : Component
-    {
-        protected PositionComponent positioner;
-        public InputComponent(Entity parent, PositionComponent positioner) : base(parent)
-        {
-            this.positioner = positioner;
-        }
-        public abstract void Update(GameTime gt);
-    }
-
     // SimpleKeyBoard: rotate left & right controlled by keyboard; no mouse = no strafing
     internal class SimpleKeyboard : InputComponent
     {
-        public SimpleKeyboard(Entity parent, PositionComponent positioner) : base (parent, positioner) 
-        { 
+        public SimpleKeyboard(Entity parent, PositionComponent positioner) : base(parent, positioner)
+        {
 
         }
 
@@ -52,7 +45,7 @@ namespace EntityFactory.Components
 
             // Left and right turning behavior
             if (keyboard.IsKeyDown(Keys.Left))
-                this.positioner.ProposedAngle += turnRate;
+                positioner.ProposedAngle += turnRate;
 
             if (keyboard.IsKeyDown(Keys.Right))
                 positioner.ProposedAngle -= turnRate;
@@ -66,7 +59,7 @@ namespace EntityFactory.Components
             else if (keyboard.IsKeyDown(Keys.Up))
             {
                 direction = 1;
-            }                        
+            }
             float forwardMomentum = direction * accelerationRate + momentum.Y;
 
             // If not moving forward or backward, apply inertia
@@ -87,7 +80,7 @@ namespace EntityFactory.Components
             // Propose new position to positioner
             float newX = (float)Math.Cos(positioner.Angle) * momentum.Y + positioner.X;
             float newY = (float)Math.Sin(positioner.Angle) * momentum.Y + positioner.Y;
-            positioner.ProposedPosition = new Vector2(newX, newY);  
+            positioner.ProposedPosition = new Vector2(newX, newY);
         }
     }
 }

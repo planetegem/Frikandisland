@@ -56,7 +56,7 @@ namespace EntityFactory
             this.instructions = new Instructions(this.graphics.PreferredBackBufferWidth, this.font);
 
             // Create player object & load model
-            this.entity = new Zombie();
+            this.entity = new Percolator();
 
             // Create world
             this.world = new World(12, 12, this.entity);

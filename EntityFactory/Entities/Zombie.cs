@@ -1,8 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
-using EntityFactory.Components;
 using EntityFactory.Components.Graphics;
 using EntityFactory.Components.Bounding;
 using EntityFactory.Systems;
+using EntityFactory.Components.Input;
 
 namespace EntityFactory.Entities
 {

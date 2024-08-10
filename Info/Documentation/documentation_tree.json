@@ -4,11 +4,9 @@
     "tree": [
         {
             "name": "EntityFactory",
-            "depth": 1,
             "children": [
                 {
                     "name": "Entity",
-                    "depth": 2,
                     "children": [
 
                     ]
@@ -16,21 +14,21 @@
                 ,
                 {
                     "name": "Component",
-                    "depth": 2,
                     "children": [
                         {
+                            "name": "RenderComponent",
+                            "children": []
+                        }
+                        ,
+                        {
                             "name": "InputComponent",
-                            "depth": 3,
-                            "children": [
-
-                            ]
+                            "children": []
                         }
                     ]
                 }
                 ,
                 {
                     "name": "System",
-                    "depth": 2,
                     "children": [
 
                     ]
@@ -39,7 +37,6 @@
         },
         {
             "name": "AssetLoader",
-            "depth": 1,
             "children": []
         }
     ]
