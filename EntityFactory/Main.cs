@@ -1,8 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using EntityFactory.Entities;
 using EntityFactory.Systems;
+using EntityFactory.Entities;
+using EntityFactory.EntityFactory.Entities;
 
 namespace EntityFactory
 {
@@ -16,7 +17,7 @@ namespace EntityFactory
         private Entity entity;
         private World world;
 
-        private bool debugMode; 
+        private bool debugMode;
         private KeyboardState keyboardState;
 
         // For instructions
@@ -24,43 +25,43 @@ namespace EntityFactory
         private Instructions instructions;
 
         private EntitySystem entitySystem;
-        private EntityLoader entityLoader;
+        private AssetLoader entityLoader;
 
         public Main()
         {
-            this.graphics = new GraphicsDeviceManager(this);
-            this.graphics.PreferredBackBufferWidth = 1200;
-            this.graphics.PreferredBackBufferHeight = 720;
+            graphics = new GraphicsDeviceManager(this);
+            graphics.PreferredBackBufferWidth = 1200;
+            graphics.PreferredBackBufferHeight = 720;
 
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
-            this.debugMode = true;
-            this.keyboardState = Keyboard.GetState();
+            debugMode = true;
+            keyboardState = Keyboard.GetState();
         }
 
         protected override void Initialize()
         {
-            this.entitySystem = EntitySystem.getInstance();
+            entitySystem = EntitySystem.getInstance();
             base.Initialize();
 
-            
+
         }
 
         protected override void LoadContent()
         {
-            this.entityLoader = EntityLoader.GetInstance(Content);
+            entityLoader = AssetLoader.GetInstance(Content);
 
 
-            this.spriteBatch = new SpriteBatch(GraphicsDevice);
-            this.font = Content.Load<SpriteFont>("fonts/coordinateFont");
-            this.instructions = new Instructions(this.graphics.PreferredBackBufferWidth, this.font);
+            spriteBatch = new SpriteBatch(GraphicsDevice);
+            font = Content.Load<SpriteFont>("fonts/coordinateFont");
+            instructions = new Instructions(graphics.PreferredBackBufferWidth, font);
 
             // Create player object & load model
-            this.entity = new Percolator();
+            entity = new Rossem();
 
             // Create world
-            this.world = new World(12, 12, this.entity);
-            this.world.LoadAssets(Content);
+            world = new World(12, 12, entity);
+            world.LoadAssets(Content);
         }
 
         protected override void Update(GameTime gameTime)
@@ -73,11 +74,11 @@ namespace EntityFactory
             }
             if (newState.IsKeyDown(Keys.Tab) && keyboardState.IsKeyUp(Keys.Tab))
             {
-                this.debugMode = !this.debugMode;
+                debugMode = !debugMode;
             }
-            this.keyboardState = newState;
+            keyboardState = newState;
 
-            this.world.Update(gameTime);
+            world.Update(gameTime);
 
             base.Update(gameTime);
         }
@@ -86,14 +87,15 @@ namespace EntityFactory
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(new Color(255, 205, 205));
-    
+
             // Draw 3D assets
             GraphicsDevice.DepthStencilState = DepthStencilState.Default;
-            this.world.Draw(this.spriteBatch, this.debugMode);
+            GraphicsDevice.BlendState = BlendState.Opaque;
+            world.Draw(spriteBatch, debugMode);
 
             // Add instructions
-            this.instructions.Draw(spriteBatch);
-            
+            instructions.Draw(spriteBatch);
+
             base.Draw(gameTime);
         }
     }

@@ -1,8 +1,6 @@
-﻿using EntityFactory.Components.Bounding;
+﻿using EntityFactory.Components.Positioning;
 using EntityFactory.Entities;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Input;
-using System;
 
 namespace EntityFactory.Components.Input
 {

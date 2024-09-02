@@ -1,13 +1,12 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using EntityFactory.Entities;
-using EntityFactory.Components;
 using EntityFactory.Systems;
 
 using System;
 using System.Collections.Generic;
-using EntityFactory.Components.Bounding;
+using EntityFactory.Entities;
+using Frikandisland.Utilities;
 
 namespace EntityFactory
 {
@@ -49,7 +48,7 @@ namespace EntityFactory
         {
             this.width = width;
             this.height = height;
-            this.field = new Cell[width, height];
+            field = new Cell[width, height];
 
             // Start filling the field: outer layer = not valid for movement
             for (int x = 0; x < width; x++)
@@ -60,17 +59,17 @@ namespace EntityFactory
                     newCell.X = x;
                     newCell.Y = y;
                     newCell.Tile = !(x == 0 || y == 0 || x == width - 1 || y == height - 1);
-                    this.field[x, y] = newCell;
+                    field[x, y] = newCell;
                 }
             }
 
             // will determine size of a tile when drawn on screen
-            this.tileSize = 20;
+            tileSize = 20;
             this.player = player;
 
             // Load all models & textures
-            this.projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(45), 800f / 480f, 0.1f, 200f);
-            this.camera = new Camera();
+            projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(45), 800f / 480f, 0.1f, 200f);
+            camera = new Camera();
         }
 
         // Load all relevant models and textures
@@ -78,13 +77,13 @@ namespace EntityFactory
         {
             try
             {
-                this.tileTexture = cm.Load<Texture2D>("textures/tile");
-                this.circleTexture = cm.Load<Texture2D>("textures/circle");
-                this.squareTexture = cm.Load<Texture2D>("textures/square");
-                this.square2Texture = cm.Load<Texture2D>("textures/square2");
-                this.tileModel = cm.Load<Model>("models/tile");
-                this.coordinateFont = cm.Load<SpriteFont>("fonts/coordinateFont");
-                this.ambientShader = cm.Load<Effect>("effects/AmbientShader");
+                tileTexture = cm.Load<Texture2D>("textures/tile");
+                circleTexture = cm.Load<Texture2D>("textures/circle");
+                squareTexture = cm.Load<Texture2D>("textures/square");
+                square2Texture = cm.Load<Texture2D>("textures/square2");
+                tileModel = cm.Load<Model>("models/tile");
+                coordinateFont = cm.Load<SpriteFont>("fonts/coordinateFont");
+                ambientShader = cm.Load<Effect>("effects/AmbientShader");
 
                 return true;
             }
@@ -99,30 +98,30 @@ namespace EntityFactory
 
             // Then check if move was valid
             List<BoundingArea> targets = new List<BoundingArea>();
-            foreach (Cell cell in this.field)
+            foreach (Cell cell in field)
             {
                 if (!cell.Tile)
                 {
-                    Vector2 pos = new Vector2(cell.X + 0.5f - this.width/2, cell.Y + 0.5f - this.height/2);
+                    Vector2 pos = new Vector2(cell.X + 0.5f - width / 2, cell.Y + 0.5f - height / 2);
                     targets.Add(new BoundingOrthogonalSquare(pos, 0.5f));
                 }
             }
             EntitySystem.ResolvePosition(gameTime, targets);
 
             EntitySystem.Animate(gameTime);
-            
+
             // this.player.Update(gameTime, targets);
 
             // Check if camera needs to be moved
-            this.camera.Update(Vector2.Zero);
+            camera.Update(Vector2.Zero);
         }
 
         // Draw functions
         public void Draw(SpriteBatch sb, bool debug)
         {
             // First draw 3D map
-            float startX = 0.5f - (this.width * 0.5f);
-            float startY = 0.5f - (this.height * 0.5f);
+            float startX = 0.5f - width * 0.5f;
+            float startY = 0.5f - height * 0.5f;
 
             Matrix world;
 
@@ -137,10 +136,10 @@ namespace EntityFactory
                         foreach (BasicEffect effect in mesh.Effects)
                         {
                             effect.TextureEnabled = true;
-                            effect.Texture = this.tileTexture;
+                            effect.Texture = tileTexture;
                             effect.World = world;
-                            effect.View = this.camera.View;
-                            effect.Projection = this.projection;
+                            effect.View = camera.View;
+                            effect.Projection = projection;
                         }
                         mesh.Draw();
                     }
@@ -148,10 +147,10 @@ namespace EntityFactory
             }
 
             // Draw entities
-            EntitySystem.Render(this.projection, this.camera.View, debug);
+            EntitySystem.Render(projection, camera.View, debug);
 
             // Debug mode is active
-            
+
             if (debug)
             {
                 /*
@@ -192,7 +191,7 @@ namespace EntityFactory
                 sb.DrawString(this.coordinateFont, coordinates, new Vector2(stringX, (this.height - 0.5f) * this.tileSize), Color.Black);
                 sb.End();
                 */
-            }         
+            }
         }
     }
 }

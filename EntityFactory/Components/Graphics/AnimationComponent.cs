@@ -20,7 +20,7 @@ namespace EntityFactory.Components.Graphics
         public AnimationComponent(Entity parent, Model model) : base(parent)
         {
             this.model = model;
-            this.animations = model.GetAnimations();
+            animations = model.GetAnimations();
         }
 
         public void SetAnimation(string animationName)
@@ -35,7 +35,7 @@ namespace EntityFactory.Components.Graphics
                 throw new Exception($"Warning: animation for {parent.id} has not been set");
 
             // Temporary: clean up later
-            bool moving = (parent.state == EntityStates.walking);
+            bool moving = parent.state == EntityStates.walking;
 
             // If moving, play animation
             if (moving || animationRunning)

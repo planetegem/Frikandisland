@@ -1,0 +1,235 @@
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\black_texture.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\black_texture_0.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\carrot_texture.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\carrot_texture_0.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\effects\AmbientShader.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\effects\MainShader.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\fonts\coordinateFont.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\Helicopter.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\HelicopterTexture.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\HelicopterTexture_0.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\models\assets_percolator1.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\models\circle.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\models\percolator.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\models\square.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\models\tile.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\models\zombie_rigged.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\snow.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\snowman_animated.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\snow_0.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\test.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\textures\circle.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\textures\square.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\textures\square2.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\textures\tile.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\zombie.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\zombie2.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\zombo-01.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\zombo-01_0.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Content\zombol_rigged.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\EntityFactory.exe
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\EntityFactory.deps.json
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\EntityFactory.runtimeconfig.json
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\EntityFactory.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\EntityFactory.pdb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\MonoGame.Framework.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\runtimes\linux-x64\native\libopenal.so.1
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\runtimes\osx\native\libSDL2.dylib
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\runtimes\osx\native\libopenal.1.dylib
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\runtimes\win-x64\native\SDL2.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\runtimes\win-x64\native\soft_oal.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\runtimes\win-x86\native\SDL2.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\runtimes\win-x86\native\soft_oal.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Animation.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\AnimationImporters.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Atlas.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\AtlasImporter.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\DDSImporter.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\Graphics.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\GraphicsImporters.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\RawModelProcessor.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\bin\Debug\net6.0\SLMCImporter.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\obj\Debug\net6.0\EntityFactory.csproj.AssemblyReference.cache
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\obj\Debug\net6.0\EntityFactory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\obj\Debug\net6.0\EntityFactory.AssemblyInfoInputs.cache
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\obj\Debug\net6.0\EntityFactory.AssemblyInfo.cs
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\obj\Debug\net6.0\EntityFactory.csproj.CoreCompileInputs.cache
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\obj\Debug\net6.0\EntityFactory.sourcelink.json
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\obj\Debug\net6.0\EntityFactory.csproj.CopyComplete
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\obj\Debug\net6.0\EntityFactory.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\obj\Debug\net6.0\refint\EntityFactory.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\obj\Debug\net6.0\EntityFactory.pdb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\obj\Debug\net6.0\EntityFactory.genruntimeconfig.cache
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\Entity Factory\MonoGame3DPlayground\obj\Debug\net6.0\ref\EntityFactory.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\models\assets_percolator1.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\black_texture.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\black_texture_0.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\carrot_texture.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\carrot_texture_0.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\effects\AmbientShader.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\effects\MainShader.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\fonts\coordinateFont.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\Helicopter.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\HelicopterTexture.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\HelicopterTexture_0.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\models\circle.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\models\percolator.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\models\square.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\models\tile.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\models\zombie_rigged.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\snow.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\snowman_animated.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\snow_0.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\test.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\textures\circle.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\textures\square.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\textures\square2.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\textures\tile.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\zombie.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\zombie2.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\zombo-01.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\zombo-01_0.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Content\zombol_rigged.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\EntityFactory.exe
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\EntityFactory.deps.json
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\EntityFactory.runtimeconfig.json
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\EntityFactory.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\EntityFactory.pdb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\MonoGame.Framework.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\runtimes\linux-x64\native\libopenal.so.1
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\runtimes\osx\native\libSDL2.dylib
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\runtimes\osx\native\libopenal.1.dylib
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\runtimes\win-x64\native\SDL2.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\runtimes\win-x64\native\soft_oal.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\runtimes\win-x86\native\SDL2.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\runtimes\win-x86\native\soft_oal.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Animation.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\AnimationImporters.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Atlas.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\AtlasImporter.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\DDSImporter.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\Graphics.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\GraphicsImporters.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\RawModelProcessor.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\bin\Debug\net6.0\SLMCImporter.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\obj\Debug\net6.0\EntityFactory.csproj.AssemblyReference.cache
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\obj\Debug\net6.0\EntityFactory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\obj\Debug\net6.0\EntityFactory.AssemblyInfoInputs.cache
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\obj\Debug\net6.0\EntityFactory.AssemblyInfo.cs
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\obj\Debug\net6.0\EntityFactory.csproj.CoreCompileInputs.cache
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\obj\Debug\net6.0\EntityFactory.sourcelink.json
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\obj\Debug\net6.0\EntityFactory.csproj.CopyComplete
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\obj\Debug\net6.0\EntityFactory.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\obj\Debug\net6.0\refint\EntityFactory.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\obj\Debug\net6.0\EntityFactory.pdb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\obj\Debug\net6.0\EntityFactory.genruntimeconfig.cache
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\MonoGame3DPlayground\obj\Debug\net6.0\ref\EntityFactory.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\obj\Debug\net6.0\EntityFactory.csproj.AssemblyReference.cache
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\obj\Debug\net6.0\EntityFactory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\obj\Debug\net6.0\EntityFactory.AssemblyInfoInputs.cache
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\obj\Debug\net6.0\EntityFactory.AssemblyInfo.cs
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\obj\Debug\net6.0\EntityFactory.csproj.CoreCompileInputs.cache
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\obj\Debug\net6.0\EntityFactory.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\obj\Debug\net6.0\refint\EntityFactory.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\obj\Debug\net6.0\EntityFactory.pdb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\Content\models\assets_percolator1.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\Content\effects\AmbientShader.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\Content\effects\MainShader.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\Content\fonts\coordinateFont.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\Content\models\circle.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\Content\models\percolator.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\Content\models\square.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\Content\models\tile.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\Content\models\zombie_rigged.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\Content\textures\circle.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\Content\textures\square.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\Content\textures\square2.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\Content\textures\tile.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\Content\zombo-01.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\Content\zombo-01_0.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\Content\zombol_rigged.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\EntityFactory.exe
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\EntityFactory.deps.json
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\EntityFactory.runtimeconfig.json
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\EntityFactory.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\EntityFactory.pdb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\MonoGame.Framework.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\runtimes\linux-x64\native\libopenal.so.1
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\runtimes\osx\native\libSDL2.dylib
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\runtimes\osx\native\libopenal.1.dylib
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\runtimes\win-x64\native\SDL2.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\runtimes\win-x64\native\soft_oal.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\runtimes\win-x86\native\SDL2.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\runtimes\win-x86\native\soft_oal.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\Animation.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\AnimationImporters.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\Atlas.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\AtlasImporter.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\DDSImporter.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\Graphics.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\GraphicsImporters.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\RawModelProcessor.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\bin\Debug\net6.0\SLMCImporter.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\obj\Debug\net6.0\EntityFactory.csproj.CopyComplete
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\obj\Debug\net6.0\EntityFactory.genruntimeconfig.cache
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\obj\Debug\net6.0\ref\EntityFactory.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\EntityFactory\obj\Debug\net6.0\EntityFactory.sourcelink.json
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\models\assets_percolator1.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\effects\AmbientShader.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\fonts\coordinateFont.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\models\circle.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\models\percolator.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\models\square.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\models\tile.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\models\zombie_rigged.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\textures\circle.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\textures\square.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\textures\square2.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\textures\tile.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\zombo-01.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\zombo-01_0.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\zombol_rigged.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\EntityFactory.exe
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\EntityFactory.deps.json
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\EntityFactory.runtimeconfig.json
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\EntityFactory.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\EntityFactory.pdb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\MonoGame.Framework.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\runtimes\linux-x64\native\libopenal.so.1
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\runtimes\osx\native\libSDL2.dylib
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\runtimes\osx\native\libopenal.1.dylib
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\runtimes\win-x64\native\SDL2.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\runtimes\win-x64\native\soft_oal.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\runtimes\win-x86\native\SDL2.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\runtimes\win-x86\native\soft_oal.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Animation.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\AnimationImporters.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Atlas.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\AtlasImporter.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\DDSImporter.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Graphics.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\GraphicsImporters.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\RawModelProcessor.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\SLMCImporter.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\obj\Debug\net6.0\EntityFactory.csproj.AssemblyReference.cache
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\obj\Debug\net6.0\EntityFactory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\obj\Debug\net6.0\EntityFactory.AssemblyInfoInputs.cache
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\obj\Debug\net6.0\EntityFactory.AssemblyInfo.cs
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\obj\Debug\net6.0\EntityFactory.csproj.CoreCompileInputs.cache
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\obj\Debug\net6.0\EntityFactory.sourcelink.json
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\obj\Debug\net6.0\EntityFactory.csproj.CopyComplete
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\obj\Debug\net6.0\EntityFactory.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\obj\Debug\net6.0\refint\EntityFactory.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\obj\Debug\net6.0\EntityFactory.pdb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\obj\Debug\net6.0\EntityFactory.genruntimeconfig.cache
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\obj\Debug\net6.0\ref\EntityFactory.dll
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\entities\rossem\rossem.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\entities\rossem\rossem_diffuse.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\entities\rossem\rossem_diffuse_0.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\effects\NormalShader.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\effects\FlatShader.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\textures\error.xnb

@@ -1,45 +1,40 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using EntityFactory.Entities;
 using System;
 using EntityFactory.Systems;
-using EntityFactory.Components.Bounding;
+using EntityFactory.Components.Positioning;
+using EntityFactory.Entities;
+using EntityFactory.EntityFactory.Components.Graphics.Shaders;
+using EntityFactory.EntityFactory.Components.Graphics;
 
 namespace EntityFactory.Components.Graphics
 {
-    internal abstract class RenderComponent : Component
+    abstract class RenderComponent : Component
     {
         // Model & Texture
         protected Model model;
         protected Texture2D texture;
 
         // Apply custom shader (default is main shader)
-        protected Effect shader;
-        public Effect Shader { set { shader = value; } }
+        protected ShaderComponent shader;
+        public ShaderComponent Shader { set { shader = value; } }
 
         // Entity's PositionComponent provides coordinates & rotation
         protected PositionComponent positioner;
 
-        // Parent is saved as part of Component constructor; try to set shader to default
+        // Parent is saved as part of Component constructor
         public RenderComponent(Entity parent, PositionComponent positioner) : base(parent)
         {
             this.positioner = positioner;
-            try
-            {
-                shader = EntityLoader.GetEffect("main");
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine(ex.Message);
-                shader = null;
-            }
         }
 
         // RenderComponents always have a Draw method
         public abstract void Draw(Matrix projection, Matrix view);
 
-        // Standard effect configuration (if no shader provided)
-        protected void StandardShader(BasicEffect effect, Matrix world, Matrix view, Matrix projection, Texture2D texture = null)
+
+        // Standard effect configuration for MonoGame (fallback in case of shader failure)
+        public bool EnableStandardEffect = false;
+        protected void StandardEffect(BasicEffect effect, Matrix world, Matrix view, Matrix projection, Texture2D texture = null)
         {
             if (texture != null)
             {
@@ -53,13 +48,22 @@ namespace EntityFactory.Components.Graphics
         }
     }
 
-    // Basic RenderComponent: no textures, no shaders (defaults to base effects)
-    internal class SimpleModel : RenderComponent
+    // Basic RenderComponent: does not have a texture
+    class SimpleModel : RenderComponent
     {
-        public SimpleModel(Entity parent, PositionComponent positioner, string model) : base(parent, positioner)
+        public SimpleModel(Entity parent, PositionComponent positioner, string modelName) : base(parent, positioner)
         {
-            this.model = EntityLoader.GetModel(model);
-            shader = null;
+            try
+            {
+                model = AssetLoader.GetModel(modelName);
+                shader = new AmbientShader(parent);
+                texture = null;
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine($"Could not set model {modelName} for {parent.id}: {e}");
+                model = null;
+            }
         }
 
         public override void Draw(Matrix projection, Matrix view)
@@ -71,40 +75,71 @@ namespace EntityFactory.Components.Graphics
             {
                 foreach (var part in mesh.MeshParts)
                 {
-                    StandardShader((BasicEffect)part.Effect, world, view, projection);
+                    if (EnableStandardEffect | shader.Effect == null)
+                    {
+                        StandardEffect((BasicEffect)part.Effect, world, view, projection);
+                    }
+                    else
+                    {
+                        part.Effect = shader.Effect;
+                        shader.SetParameters(world, view, projection);
+                    }
                 }
                 mesh.Draw();
             }
         }
     }
 
-    // Basic static model: no animations; texture is optional
-    internal class StaticModel : RenderComponent
+    // Model with textures, not animated
+    class TexturedModel : RenderComponent
     {
-        // If only model argument is given: implies same name for model & texture
-        public StaticModel(Entity parent, PositionComponent positioner, string model) : base(parent, positioner)
+        // Simple constructor: model & texture have the same name
+        public TexturedModel(Entity parent, PositionComponent positioner, string modelName) : base(parent, positioner)
         {
             try
             {
-                this.model = EntityLoader.GetModel(model);
-                texture = EntityLoader.GetTexture(model);
+                model = AssetLoader.GetModel(modelName);
+                try
+                {
+                    texture = AssetLoader.GetTexture(modelName);
+                    shader = new NormalShader(parent, texture);
+
+                }
+                catch (Exception e)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Error setting texture for {parent.id}: {e}");
+                    texture = AssetLoader.GetTexture("error");
+                    shader = new FlatShader(parent, texture);
+                }
             }
             catch (Exception e)
             {
-                System.Diagnostics.Debug.WriteLine($"Error creating renderer for {parent.id}: {e}");
+                System.Diagnostics.Debug.WriteLine($"Error setting model for {parent.id}: {e}");
             }
         }
-        // Else: apply separate texture and model
-        public StaticModel(Entity parent, PositionComponent positioner, string model, string texture) : base(parent, positioner)
+
+        // Constructor with custom texture
+        public TexturedModel(Entity parent, PositionComponent positioner, string modelName, string textureName) : base(parent, positioner)
         {
             try
             {
-                this.model = EntityLoader.GetModel(model);
-                this.texture = EntityLoader.GetTexture(texture);
+                model = AssetLoader.GetModel(modelName);
+
+                try
+                {
+                    texture = AssetLoader.GetTexture(textureName);
+                    shader = new NormalShader(parent, texture);
+                }
+                catch (Exception e)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Error setting texture for {parent.id}: {e}");
+                    texture = AssetLoader.GetTexture("error");
+                    shader = new FlatShader(parent, texture);
+                }
             }
             catch (Exception e)
             {
-                System.Diagnostics.Debug.WriteLine($"Error creating renderer for {parent.id}: {e}");
+                System.Diagnostics.Debug.WriteLine($"Error setting model for {parent.id}: {e}");
             }
         }
 
@@ -117,29 +152,15 @@ namespace EntityFactory.Components.Graphics
             {
                 foreach (var part in mesh.MeshParts)
                 {
-                    // Failsafe
-                    if (shader == null || texture == null)
+                    // Failsafe: fallback to standard effect matrix from MonoGame
+                    if (EnableStandardEffect | shader.Effect == null)
                     {
-                        System.Diagnostics.Debug.WriteLine($"Shader or texture for {parent.id} appear to be missing: switching to default effects");
-                        StandardShader((BasicEffect)part.Effect, world, view, projection);
+                        StandardEffect((BasicEffect)part.Effect, world, view, projection);
                     }
                     else
                     {
-                        part.Effect = shader;
-                        shader.Parameters["World"].SetValue(world);
-                        shader.Parameters["View"].SetValue(view);
-                        shader.Parameters["Projection"].SetValue(projection);
-
-                        shader.Parameters["AmbientColor"].SetValue(Color.White.ToVector4());
-                        shader.Parameters["AmbientIntensity"].SetValue(1f);
-
-                        shader.Parameters["DiffuseColor"].SetValue(Color.White.ToVector4());
-                        shader.Parameters["DiffuseIntensity"].SetValue(0.0001f);
-                        shader.Parameters["DiffuseLightDirection"].SetValue(new Vector3(100, -100, 100));
-
-                        Matrix worldInverseTransposeMatrix = Matrix.Transpose(Matrix.Invert(world));
-                        shader.Parameters["WorldInverseTranspose"].SetValue(worldInverseTransposeMatrix);
-                        shader.Parameters["ModelTexture"].SetValue(texture);
+                        part.Effect = shader.Effect;
+                        shader.SetParameters(world, view, projection);
                     }
                 }
                 mesh.Draw();
@@ -148,7 +169,7 @@ namespace EntityFactory.Components.Graphics
     }
 
     // AnimatedModel: same as StaticModel, but also creates an AnimationComponent
-    internal class AnimatedModel : RenderComponent
+    class AnimatedModel : RenderComponent
     {
         // AnimationComponent updates model based on gametime
         private AnimationComponent animator;
@@ -159,9 +180,10 @@ namespace EntityFactory.Components.Graphics
         {
             try
             {
-                this.model = EntityLoader.GetModel(model);
-                texture = EntityLoader.GetTexture(model);
+                this.model = AssetLoader.GetModel(model);
+                texture = AssetLoader.GetTexture(model);
                 animator = new AnimationComponent(parent, this.model);
+                shader = new NormalShader(parent, texture);
             }
             catch (Exception e)
             {
@@ -172,8 +194,8 @@ namespace EntityFactory.Components.Graphics
         {
             try
             {
-                this.model = EntityLoader.GetModel(model);
-                this.texture = EntityLoader.GetTexture(texture);
+                this.model = AssetLoader.GetModel(model);
+                this.texture = AssetLoader.GetTexture(texture);
                 animator = new AnimationComponent(parent, this.model);
             }
             catch (Exception e)
@@ -196,26 +218,12 @@ namespace EntityFactory.Components.Graphics
                     if (shader == null || texture == null)
                     {
                         System.Diagnostics.Debug.WriteLine($"Shader or texture for {parent.id} appear to be missing: switching to default effects");
-                        StandardShader((BasicEffect)part.Effect, world, view, projection);
+                        StandardEffect((BasicEffect)part.Effect, world, view, projection);
                     }
                     else
                     {
-                        part.Effect = shader;
-                        shader.Parameters["World"].SetValue(world);
-                        shader.Parameters["View"].SetValue(view);
-                        shader.Parameters["Projection"].SetValue(projection);
-
-                        shader.Parameters["AmbientColor"].SetValue(Color.White.ToVector4());
-                        shader.Parameters["AmbientIntensity"].SetValue(1f);
-
-                        shader.Parameters["DiffuseColor"].SetValue(Color.White.ToVector4());
-                        shader.Parameters["DiffuseIntensity"].SetValue(0.0001f);
-                        shader.Parameters["DiffuseLightDirection"].SetValue(new Vector3(100, -100, 100));
-
-                        Matrix worldInverseTransposeMatrix = Matrix.Transpose(Matrix.Invert(world));
-                        shader.Parameters["WorldInverseTranspose"].SetValue(worldInverseTransposeMatrix);
-                        shader.Parameters["ModelTexture"].SetValue(texture);
-
+                        part.Effect = shader.Effect;
+                        shader.SetParameters(world, view, projection);
                         animator.ApplyUpdateToRender(part);
                     }
                 }

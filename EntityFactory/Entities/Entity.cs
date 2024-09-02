@@ -17,11 +17,11 @@ namespace EntityFactory.Entities
         public readonly string id;
         public EntityStates state;
 
-        public Entity(string id, EntityStates state = default(EntityStates))
+        public Entity(string id, EntityStates state = default)
         {
             try
             {
-                this.id = id + EntityLoader.EntityCount;
+                this.id = id + AssetLoader.EntityCount;
             }
             catch (Exception e)
             {

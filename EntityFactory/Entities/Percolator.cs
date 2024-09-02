@@ -1,13 +1,14 @@
 ﻿using Microsoft.Xna.Framework;
-using EntityFactory.Components.Bounding;
+using EntityFactory.Components.Positioning;
 using EntityFactory.Components.Graphics;
 using EntityFactory.Components.Input;
+using Frikandisland.Utilities;
 
 namespace EntityFactory.Entities
 {
     internal class Percolator : Entity
     {
-        public Percolator(float x = 0f, float y = 0f): base("percolator")
+        public Percolator(float x = 0f, float y = 0f) : base("percolator")
         {
             // Step 1: set position component
             Vector2 startPos = new Vector2(x, y);
@@ -22,6 +23,7 @@ namespace EntityFactory.Entities
 
             // Step 3: renderer
             SimpleModel renderer = new SimpleModel(this, positioner, "percolator");
+            renderer.EnableStandardEffect = true;
 
         }
     }

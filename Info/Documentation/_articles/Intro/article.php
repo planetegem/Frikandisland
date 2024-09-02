@@ -8,7 +8,4 @@
     Frikandisland is an open world survival game written in C#, making use of the <a href= "https://monogame.net" target="_blank">MonoGame framework</a> (the open source successor to XNA) to make the bridge to OpenGL & DirectX.
     If you're interested in MonoGame (or just game development in general), <a href="http://rbwhitaker.wikidot.com/" target="_blank">RB Whitaker's Wiki</a> is highly recommended!
 </p>
-<p>
-    Currently, the game uses an EntityFactory to create & render entities, and an AssetLoader to keep track of 3D assets and shaders.
-</p>
 

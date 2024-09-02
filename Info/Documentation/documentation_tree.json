@@ -16,12 +16,17 @@
                     "name": "Component",
                     "children": [
                         {
-                            "name": "RenderComponent",
+                            "name": "Graphics",
                             "children": []
                         }
                         ,
                         {
-                            "name": "InputComponent",
+                            "name": "Positioning",
+                            "children": []
+                        }
+                        ,
+                        {
+                            "name": "Input",
                             "children": []
                         }
                     ]

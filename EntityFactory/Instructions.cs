@@ -18,8 +18,8 @@ namespace EntityFactory
             this.font = font;
 
             Rectangle rec = new Rectangle((int)(screenWidth - 50), 0, 30, 0);
-            this.controlsX = AlignText(this.controls, font, rec, "right");
-            this.debugX = AlignText(this.debug, font, rec, "right"); 
+            controlsX = AlignText(controls, font, rec, "right");
+            debugX = AlignText(debug, font, rec, "right");
         }
         public static float AlignText(string text, SpriteFont font, Rectangle area, string alignment = "centered")
         {
@@ -28,11 +28,11 @@ namespace EntityFactory
             switch (alignment)
             {
                 case "centered":
-                    return (float) (area.X + (area.Width - textWidth) * 0.5);
+                    return (float)(area.X + (area.Width - textWidth) * 0.5);
                 case "right":
-                    return (float) (area.X + (area.Width - textWidth));
+                    return (float)(area.X + (area.Width - textWidth));
                 case "left":
-                    return (float) area.X;
+                    return area.X;
             }
             return 0f;
         }
@@ -40,8 +40,8 @@ namespace EntityFactory
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
-            spriteBatch.DrawString(this.font, this.controls, new Vector2(controlsX, 20), Color.Black);
-            spriteBatch.DrawString(this.font, this.debug, new Vector2(debugX, 40), Color.Black);
+            spriteBatch.DrawString(font, controls, new Vector2(controlsX, 20), Color.Black);
+            spriteBatch.DrawString(font, debug, new Vector2(debugX, 40), Color.Black);
             spriteBatch.End();
         }
     }
