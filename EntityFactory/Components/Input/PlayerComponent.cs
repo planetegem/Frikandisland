@@ -9,16 +9,13 @@ namespace EntityFactory.Components.Input
     // SimpleKeyBoard: rotate left & right controlled by keyboard; no mouse = no strafing
     internal class SimpleKeyboard : InputComponent
     {
-        public SimpleKeyboard(Entity parent, PositionComponent positioner) : base(parent, positioner)
-        {
-
-        }
+        public SimpleKeyboard(Entity parent) : base(parent) { }
 
         // Parameters that adjust the feel of input
         private float accelerationRate = 0.0025f;
         private float inertia = 0f;
         private float turnRate = 0.1f;
-        private float maxSpeed = 0.05f;
+        private float maxSpeed = 0.03f;
 
         // Override customizable parameters
         public void SetParameters(float accelerationRate, float inertia, float turnRate, float maxSpeed)
@@ -32,6 +29,8 @@ namespace EntityFactory.Components.Input
         // Update function called during input phase
         public override void Update(GameTime gt)
         {
+            if (positioner == null) throw new Exception($"Error on {parent.id}: link positioner to input component!");
+
             // Get keyboard state
             KeyboardState keyboard = Keyboard.GetState();
 
@@ -46,15 +45,28 @@ namespace EntityFactory.Components.Input
             if (keyboard.IsKeyDown(Keys.Right))
                 positioner.ProposedAngle -= turnRate;
 
+            parent.state = EntityStates.idle;
+
+            float maxForwardSpeed = maxSpeed;
             // Check for forwards or backwards movement
             int direction = 0;
             if (keyboard.IsKeyDown(Keys.Down))
             {
                 direction = -1;
+                parent.state = EntityStates.backtracking;
             }
             else if (keyboard.IsKeyDown(Keys.Up))
             {
                 direction = 1;
+                if (keyboard.IsKeyDown(Keys.LeftShift))
+                {
+                    parent.state = EntityStates.running;
+                    maxForwardSpeed = maxSpeed * 2.5f;
+                } 
+                else
+                {
+                    parent.state = EntityStates.walking;
+                }
             }
             float forwardMomentum = direction * accelerationRate + momentum.Y;
 
@@ -64,14 +76,11 @@ namespace EntityFactory.Components.Input
                 forwardMomentum *= inertia;
             }
             // Limit max momentum, round down to approach 0
-            forwardMomentum = Math.Clamp(forwardMomentum, -maxSpeed, maxSpeed);
+            forwardMomentum = Math.Clamp(forwardMomentum, -maxSpeed, maxForwardSpeed);
             forwardMomentum = (float)Math.Round(forwardMomentum, 5);
 
             // Apply momentum to positioning component
             positioner.Momentum = new Vector2(0, forwardMomentum);
-
-            // Set entity state
-            parent.state = forwardMomentum != 0 ? EntityStates.walking : EntityStates.idle;
 
             // Propose new position to positioner
             float newX = (float)Math.Cos(positioner.Angle) * momentum.Y + positioner.X;

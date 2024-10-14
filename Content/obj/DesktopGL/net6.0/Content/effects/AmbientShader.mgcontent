@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/effects/AmbientShader.fx</SourceFile>
-  <SourceTime>2024-08-30T14:12:26.1451379+02:00</SourceTime>
+  <SourceTime>2024-09-25T17:12:41.4626492+02:00</SourceTime>
   <DestFile>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/bin/DesktopGL/Content/effects/AmbientShader.xnb</DestFile>
-  <DestTime>2024-08-30T14:12:29.6504354+02:00</DestTime>
+  <DestTime>2024-10-05T14:23:23.0999847+02:00</DestTime>
   <Importer>EffectImporter</Importer>
   <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
   <Processor>EffectProcessor</Processor>

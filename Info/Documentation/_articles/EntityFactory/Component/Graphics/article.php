@@ -61,12 +61,14 @@
         No texture was found, so the renderer defaulted to the standard shader without textures (essentially the same render method used in the SimpleModel component).
     </span>
 </div>
-<p>
+<p id="animated-model-chapter">
+    <?php
+        $link = isset($articles["Animation"]) ? fixUrl($articles["Animation"]->path) : fixUrl("Animation");
+    ?>
     Even more advanced is the <b>AnimatedModel</b>, which creates an AnimationComponent when its constructor is called.
-    The AnimationComponent updates bone positions in the model (based on the state of the entity and certain timing factors), 
-    which was made possible with the <a href="https://github.com/tainicom/Aether.Extras" target="_blank">Aether.Extras library</a>.
+    Read more about this component in the section on <a href="<?php echo $link; ?>">animations</a>.
 </p>
-<h4>Resource requirements</h4>
+<h4>Blender instructions</h4>
 <p>
     Models in fbx format (created in Blender) can be pushed through the Monogame Content pipeline.
     For animated models, use the CPU Animated Model processor.

@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/entities/rossem/rossem.fbx</SourceFile>
-  <SourceTime>2024-08-25T12:45:28.347859+02:00</SourceTime>
+  <SourceFile>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/entities/rossem/rossem-animated.fbx</SourceFile>
+  <SourceTime>2024-09-22T14:28:04.6807307+02:00</SourceTime>
   <DestFile>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/bin/DesktopGL/entities/rossem/rossem.xnb</DestFile>
-  <DestTime>2024-08-25T12:49:33.0894067+02:00</DestTime>
+  <DestTime>2024-10-06T13:10:53.6023905+02:00</DestTime>
   <Importer>FbxImporter</Importer>
   <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
-  <Processor>ModelProcessor</Processor>
-  <ProcessorTime>2022-07-26T13:44:56+02:00</ProcessorTime>
+  <Processor>CpuAnimatedModelProcessor</Processor>
+  <ProcessorTime>2024-02-22T17:46:47.8351432+01:00</ProcessorTime>
+  <Parameters>
+    <Key>VertexBufferType</Key>
+    <Value>DynamicWriteOnly</Value>
+  </Parameters>
+  <Parameters>
+    <Key>IndexBufferType</Key>
+    <Value>Default</Value>
+  </Parameters>
+  <Parameters>
+    <Key>MaxBones</Key>
+    <Value>72</Value>
+  </Parameters>
+  <Parameters>
+    <Key>GenerateKeyframesFrequency</Key>
+    <Value>0</Value>
+  </Parameters>
+  <Parameters>
+    <Key>FixRealBoneRoot</Key>
+    <Value>False</Value>
+  </Parameters>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>0,0,0,0</Value>
@@ -50,11 +70,11 @@
   </Parameters>
   <Parameters>
     <Key>RotationZ</Key>
-    <Value>90</Value>
+    <Value>-90</Value>
   </Parameters>
   <Parameters>
     <Key>Scale</Key>
-    <Value>1</Value>
+    <Value>0.012</Value>
   </Parameters>
   <Parameters>
     <Key>SwapWindingOrder</Key>

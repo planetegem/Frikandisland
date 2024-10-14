@@ -123,11 +123,14 @@ main {
     margin: 4.5em auto 2em;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.3em;
+    font-size: 1.25em;
 }
 @media only screen and (min-width: 850px) {
     main {
         font-size: 1.0em;
+    }
+    article p {
+        text-align: justify;
     }
 }
 h3, h4 {
@@ -150,14 +153,14 @@ p {
     margin-bottom: 1em;
     line-height: 1.25em;
 }
-article a  {
+main a  {
     color: var(--themeColor2);
 }
-article a:hover {
+main a:hover {
     cursor: pointer;
     text-decoration: underline;
 }
-article a:active {
+main a:active {
     color: red;
 }
 main article img {
@@ -173,17 +176,17 @@ main span {
     line-height: 1.4em;
     margin-bottom: 3em;
 }
-main article table {
+article table {
     width: 95%;
     margin: auto;   
 }
-main article th {
+article th {
     font-weight:100;
     text-decoration: underline;
     text-align: right;
     vertical-align: text-top;
 }
-main article td {
+article td {
     text-align: left;
     vertical-align: text-top;
     padding-left: 0.5em;
@@ -198,6 +201,18 @@ article .small {
     width: 60%;
     margin: auto;
 }
+article li {
+    display: list-item;
+    text-align: left;
+    margin-bottom: 0.5em;
+}
+@media only screen and (min-width: 850px) {
+    article li {
+        margin-left: 1.5em;
+        margin-right: 3em;
+        text-align: justify;
+    }
+}
 
 
 /* Navigation */
@@ -208,7 +223,7 @@ nav {
     align-items: center;
     margin: 2em 0.75em 2.5em;
 }
-ul {
+nav ul {
     display: flex;
     flex-flow: column;
     margin: 0.5em 0;
@@ -225,22 +240,22 @@ ul.nav-to-children {
     margin-left: 7.5%;
 }
 
-li {
+nav li {
     margin: 0.3em;
     filter: brightness(120%);
 }
-li:hover {
+nav li:hover {
     filter: brightness(100%);
     cursor: pointer;
 }
-li img {
+nav li img {
     height: 0.6em;
     margin: 0 0.3em;
 }
 ul.nav-to-parent img {
     transform: rotate(180deg);
 } 
-li a {
+nav li a {
     font-size: 1.2em;
     font-weight: bold;
     text-decoration: none;

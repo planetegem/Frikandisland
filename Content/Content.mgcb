@@ -52,9 +52,14 @@
 /processorParam:TextureFormat=Color
 /build:entities/rossem/rossem_diffuse.png
 
-#begin entities/rossem/rossem.fbx
+#begin entities/rossem/rossem-animated.fbx
 /importer:FbxImporter
-/processor:ModelProcessor
+/processor:CpuAnimatedModelProcessor
+/processorParam:VertexBufferType=DynamicWriteOnly
+/processorParam:IndexBufferType=Default
+/processorParam:MaxBones=72
+/processorParam:GenerateKeyframesFrequency=0
+/processorParam:FixRealBoneRoot=False
 /processorParam:ColorKeyColor=0,0,0,0
 /processorParam:ColorKeyEnabled=True
 /processorParam:DefaultEffect=BasicEffect
@@ -65,11 +70,11 @@
 /processorParam:ResizeTexturesToPowerOfTwo=False
 /processorParam:RotationX=0
 /processorParam:RotationY=0
-/processorParam:RotationZ=90
-/processorParam:Scale=1
+/processorParam:RotationZ=-90
+/processorParam:Scale=0.012
 /processorParam:SwapWindingOrder=False
 /processorParam:TextureFormat=Compressed
-/build:entities/rossem/rossem.fbx
+/build:entities/rossem/rossem-animated.fbx;entities/rossem/rossem.fbx
 
 #begin fonts/coordinateFont.spritefont
 /importer:FontDescriptionImporter

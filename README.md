@@ -12,3 +12,6 @@ Parts:
 - Aether.Extras adds support for animated models
 - EntityFactory is a continuation of this project: https://github.com/planetegem/MonoGame3DPlayground. This is where I can test movement mechanics, 3D models & animations, and their hitboxes.
 
+Tutorials:
+- https://github.com/SimonDarksideJ/XNAGameStudio/wiki#riemers-tutorial-series
+

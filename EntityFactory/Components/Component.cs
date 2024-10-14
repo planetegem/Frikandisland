@@ -1,5 +1,5 @@
 ﻿using EntityFactory.Entities;
-using EntityFactory.Systems;
+using Frikandisland.Systems;
 
 namespace EntityFactory.Components
 {

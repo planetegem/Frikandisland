@@ -16,18 +16,11 @@
                     "name": "Component",
                     "children": [
                         {
-                            "name": "Graphics",
-                            "children": []
+                            "name": "Graphics"
                         }
                         ,
                         {
-                            "name": "Positioning",
-                            "children": []
-                        }
-                        ,
-                        {
-                            "name": "Input",
-                            "children": []
+                            "name": "Animation"
                         }
                     ]
                 }
@@ -39,10 +32,6 @@
                     ]
                 }
             ]
-        },
-        {
-            "name": "AssetLoader",
-            "children": []
         }
     ]
 }

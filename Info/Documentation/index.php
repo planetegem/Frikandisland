@@ -40,14 +40,17 @@ function buildArticleRegistry() {
         $path = $depth > 1 ? $articles[$parent]->path . "/" . $name : $name;
 
         $children = array();
-        foreach($item->children as $child){
-            $children[] = $child->name;
+        if (property_exists($item, "children")){
+            foreach($item->children as $child){
+                $children[] = $child->name;
+            }
         }
 
         $articles[$name] = new CodeArticle($name, $path, $depth, $children, $parent);
-
-        foreach($item->children as $child){
-            loopThroughChildren($name, $child, $depth + 1);
+        if (property_exists($item, "children")){
+            foreach($item->children as $child){
+                loopThroughChildren($name, $child, $depth + 1);
+            }
         }
     }
 
@@ -98,10 +101,6 @@ function fixUrl($url){
         return "https://www.planetegem.be/eb/frikandisland/documentation/" . $url;
     }
 }
-
-
-
-
 ?>
 
 <!DOCTYPE html>

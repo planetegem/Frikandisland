@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 
-namespace EntityFactory.EntityFactory.Components.Graphics.Shaders
+namespace EntityFactory.Components.Graphics
 {
     class NormalShader : ShaderComponent
     {
@@ -18,7 +18,7 @@ namespace EntityFactory.EntityFactory.Components.Graphics.Shaders
         public Vector4 ambientColor = new Vector4(0.6f, 0.6f, 0.6f, 1f);
         public float ambientIntensity = 0.1f;
 
-        public Vector4 diffuseColor = new Vector4(0.6f, 0.6f, 0.6f, 1f);
+        public Vector4 diffuseColor = new Vector4(1f, 1f, 1f, 1f);
         public float diffuseIntensity = 0.8f;
         public Vector3 diffuseDirection = new Vector3(1f, -5f, 5f);
 

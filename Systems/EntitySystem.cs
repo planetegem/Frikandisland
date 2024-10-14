@@ -2,27 +2,20 @@
 using EntityFactory.Components.Positioning;
 using EntityFactory.Components.Graphics;
 using EntityFactory.Components.Input;
+using EntityFactory.Entities;
 using Frikandisland.Utilities;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
+using EntityFactory.EntityFactory.Components;
 
-namespace EntityFactory.Systems
+namespace Frikandisland.Systems
 {
     // EntitySystem keeps track of all components and handles their execution
     // Uses singleton pattern
     internal sealed class EntitySystem
     {
-        // Constructor is private to hide it
-        private EntitySystem() 
-        { 
-            renderComponents = new List<RenderComponent>();
-            animationComponents = new List<AnimationComponent>();
-            inputComponents = new List<InputComponent>();
-            boundingComponents = new List<BoundingComponent>();
-            positionComponents = new List<PositionComponent>();
-        }
-
+        // SINGLETON DESIGN PATTERN
         // Instance property & padlock for thread safety
         private static EntitySystem instance = null;
         private static readonly object instanceLock = new object();
@@ -41,12 +34,39 @@ namespace EntityFactory.Systems
             return instance;
         }
 
+        // Player & camera props
+        public static PositionComponent Leader 
+        {
+            set
+            {
+                if (instance is null) 
+                    throw new Exception("Invalid instance of EntitySystem: tried to initialize camera without system");
+                
+                Camera camera = new Camera(value);
+            }
+        }
+        private CameraPosition camera;
+        public static CameraPosition Camera
+        {
+            set
+            {
+                if (instance is null) 
+                    throw new Exception("Invalid instance of EntitySystem: tried to initialize camera without system");
+                
+                instance.camera = value;
+            }
+        }
+
+        // Constructor is private to hide it
+        private EntitySystem() { }
+
         // Register components
-        private List<RenderComponent> renderComponents;
-        private List<AnimationComponent> animationComponents;
-        private List<InputComponent> inputComponents;
-        private List<BoundingComponent> boundingComponents;
-        private List<PositionComponent> positionComponents;
+        private List<RenderComponent> renderComponents = new List<RenderComponent>();
+        private List<AnimationComponent> animationComponents = new List<AnimationComponent>();
+        private List<InputComponent> inputComponents = new List<InputComponent>();
+        private List<BoundingComponent> boundingComponents = new List<BoundingComponent>();
+        private List<PositionComponent> positionComponents = new List<PositionComponent>();
+        private List<TilePropsComponent> tilePropsComponents = new List<TilePropsComponent>();
 
         public static void RegisterComponent(Component[] components)
         {
@@ -73,6 +93,8 @@ namespace EntityFactory.Systems
                 instance.boundingComponents.Add((BoundingComponent)component);
             if (component is PositionComponent)
                 instance.positionComponents.Add((PositionComponent)component);
+            if (component is TilePropsComponent)
+                instance.tilePropsComponents.Add((TilePropsComponent)component);
         }
 
         // Phase 1: input components propose changes to position components
@@ -94,23 +116,31 @@ namespace EntityFactory.Systems
             }
         }
         // Phase 2: Bounding components check proposed positions for collision detection and resolve position
-        public static void ResolvePosition(GameTime gameTime, List<BoundingArea> neighbours)
+        public static void ResolvePosition(GameTime gameTime)
         {
             if (instance is null)
                 throw new Exception("Invalid instance of EntitySystem: set instance of EntitySystem during game start");
+
+            // Make list of all tiles with collision enabled
+            List<BoundingArea> tiles = new List<BoundingArea>();
+            foreach (TilePropsComponent tile in instance.tilePropsComponents)
+            {
+                if (tile.collision) tiles.Add(tile.bounds);
+            }
 
             // First check all bounding components
             foreach (BoundingComponent component in instance.boundingComponents)
             {
                 try
                 {
-                    component.ResolvePosition(neighbours);
+                    component.ResolvePosition(tiles);
                 }
                 catch (Exception e)
                 {
                     System.Diagnostics.Debug.WriteLine($"Error on entity {component.getParentId()}: {e}");
                 }
             }
+
             // Next go through all position components and resolve proposed changes as well (for entities without bounding component)
             foreach (PositionComponent component in instance.positionComponents)
             {
@@ -137,15 +167,16 @@ namespace EntityFactory.Systems
             }
         }
         // Phase 4: Render components are fired to draw entity in viewport
-        public static void Render(Matrix projection, Matrix view, bool debug)
+        public static void Render(Matrix projection, bool debug)
         {
             if (instance is null)
                 throw new Exception("Invalid instance of EntitySystem: set instance of EntitySystem during game start");
-            
+
+            // First update camera
             foreach(RenderComponent component in instance.renderComponents)
             {
                 try { 
-                    component.Draw(projection, view);
+                    component.Draw(projection, instance.camera.View);
                 }
                 catch (Exception e)
                 {
@@ -159,7 +190,7 @@ namespace EntityFactory.Systems
                 {
                     try
                     {
-                        component.RenderBounds(projection, view);
+                        component.RenderBounds(projection, instance.camera.View);
                     }
                     catch (Exception e)
                     {

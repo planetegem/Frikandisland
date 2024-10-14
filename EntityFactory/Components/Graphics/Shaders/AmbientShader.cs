@@ -1,12 +1,7 @@
 ﻿using EntityFactory.Entities;
 using Microsoft.Xna.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EntityFactory.EntityFactory.Components.Graphics.Shaders
+namespace EntityFactory.Components.Graphics
 {
     internal class AmbientShader : ShaderComponent
     {

@@ -8,10 +8,8 @@ namespace EntityFactory.Components.Input
     internal abstract class InputComponent : Component
     {
         protected PositionComponent positioner;
-        public InputComponent(Entity parent, PositionComponent positioner) : base(parent)
-        {
-            this.positioner = positioner;
-        }
+        public PositionComponent Positioner { set { positioner = value; } }
+        public InputComponent(Entity parent) : base(parent) { }
         public abstract void Update(GameTime gt);
     }
 }

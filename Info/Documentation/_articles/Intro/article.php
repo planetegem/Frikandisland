@@ -1,4 +1,4 @@
-<p>
+<p style="text-align: center;">
     Welcome to the Frikandisland code documentation!
     <br>
     From this page you can navigate between high level descriptions of the different code components used for Frikandisland.

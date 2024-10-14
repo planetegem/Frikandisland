@@ -22,4 +22,20 @@
         <th>Zombie:</th>
         <td>a simple animated model which can be moved with the keyboard. Used while testing Aether.Extras animations.</td>
     </tr>
+    <tr>
+        <th>Rossem:</th>
+        <td>the first entity with a real, animated model in the game. It gets keyboard input, and can cycle between multiple animation states.</td>
+    </tr>
+    <tr>
+        <th>WorldTile:</th>
+        <td>an entity to render world tiles on screen and detect collision detection (specifically if player entities go out of bounds). Currently very basic, but will become more important when I start work on world generation.</td>
+    </tr>
+    <tr>
+        <th>Camera:</th>
+        <td>
+            A special entity that tracks where the camera is. 
+            It has a specialized CameraPosition component and CameraController component.
+            The system retrieves a view matrix from this entity during the render phase.
+        </td>
+    </tr>
 </table>

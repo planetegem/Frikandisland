@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace EntityFactory.EntityFactory.Components.Graphics.Shaders
+namespace EntityFactory.Components.Graphics
 {
     internal class FlatShader : ShaderComponent
     {

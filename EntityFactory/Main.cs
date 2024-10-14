@@ -1,9 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using EntityFactory.Systems;
+using Frikandisland.Systems;
 using EntityFactory.Entities;
-using EntityFactory.EntityFactory.Entities;
+using Frikandisland.Content;
 
 namespace EntityFactory
 {
@@ -11,8 +11,6 @@ namespace EntityFactory
     {
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
-
-        private Matrix projection;
 
         private Entity entity;
         private World world;
@@ -26,6 +24,10 @@ namespace EntityFactory
 
         private EntitySystem entitySystem;
         private AssetLoader entityLoader;
+
+        // Projection matrix used in 3D renders
+        private Matrix projection;
+        private Camera camera;
 
         public Main()
         {
@@ -43,14 +45,11 @@ namespace EntityFactory
         {
             entitySystem = EntitySystem.getInstance();
             base.Initialize();
-
-
         }
 
         protected override void LoadContent()
         {
             entityLoader = AssetLoader.GetInstance(Content);
-
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
             font = Content.Load<SpriteFont>("fonts/coordinateFont");
@@ -61,24 +60,33 @@ namespace EntityFactory
 
             // Create world
             world = new World(12, 12, entity);
-            world.LoadAssets(Content);
+
+            // Camera & perspective
+            projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(45), 800f / 480f, 0.1f, 200f);
         }
 
         protected override void Update(GameTime gameTime)
         {
+            // KEYBOARD
             KeyboardState newState = Keyboard.GetState();
+
             // Exit using escape
             if (newState.IsKeyDown(Keys.Escape))
             {
                 Exit();
             }
+
+            // Enable debug mode (visible bounding boxes)
             if (newState.IsKeyDown(Keys.Tab) && keyboardState.IsKeyUp(Keys.Tab))
             {
                 debugMode = !debugMode;
             }
             keyboardState = newState;
 
-            world.Update(gameTime);
+            // ENTITY SYSTEM UPDATE LOGIC
+            EntitySystem.ProcessInput(gameTime);
+            EntitySystem.ResolvePosition(gameTime);
+            EntitySystem.Animate(gameTime);
 
             base.Update(gameTime);
         }
@@ -91,7 +99,7 @@ namespace EntityFactory
             // Draw 3D assets
             GraphicsDevice.DepthStencilState = DepthStencilState.Default;
             GraphicsDevice.BlendState = BlendState.Opaque;
-            world.Draw(spriteBatch, debugMode);
+            EntitySystem.Render(projection, debugMode);
 
             // Add instructions
             instructions.Draw(spriteBatch);

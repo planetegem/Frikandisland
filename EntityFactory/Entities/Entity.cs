@@ -1,4 +1,4 @@
-﻿using EntityFactory.Systems;
+﻿using Frikandisland.Content;
 using System;
 
 namespace EntityFactory.Entities
@@ -8,7 +8,7 @@ namespace EntityFactory.Entities
     public enum EntityStates
     {
         idle = 0,
-        standing = 1,
+        backtracking = 1,
         walking = 2,
         running = 3
     }

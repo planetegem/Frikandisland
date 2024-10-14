@@ -1,8 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using EntityFactory.Components.Positioning;
-using EntityFactory.Components.Graphics;
 using EntityFactory.Components.Input;
 using Frikandisland.Utilities;
+using EntityFactory.Components.Graphics;
 
 namespace EntityFactory.Entities
 {
@@ -19,7 +19,8 @@ namespace EntityFactory.Entities
                 new BoundingCircle(new Vector2(0, 0), 0.25f)
             };
             BoundingComponent bounder = new BoundingComponent(this, positioner, bBoxes);
-            SimpleKeyboard inputer = new SimpleKeyboard(this, positioner);
+            SimpleKeyboard inputer = new SimpleKeyboard(this);
+            inputer.Positioner = positioner;
 
             // Step 3: renderer
             SimpleModel renderer = new SimpleModel(this, positioner, "percolator");

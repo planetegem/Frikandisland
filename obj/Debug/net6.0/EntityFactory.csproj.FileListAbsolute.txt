@@ -233,3 +233,6 @@ C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug
 C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\effects\NormalShader.xnb
 C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\effects\FlatShader.xnb
 C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\textures\error.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\entities\rossem\rossem-animated.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\entities\rossem\blender files\zombo-01_0.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\entities\rossem\zombo-01_0.xnb
