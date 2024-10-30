@@ -40,6 +40,18 @@
 /processorParam:DebugMode=Auto
 /build:effects/NormalShader.fx
 
+#begin effects/RiemerShader.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:effects/RiemerShader.fx
+
+#begin effects/TransparentShader.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:effects/TransparentShader.fx
+
 #begin entities/rossem/rossem_diffuse.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -51,6 +63,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:entities/rossem/rossem_diffuse.png
+
+#begin entities/rossem/rossem_new.fbx
+/importer:FbxImporter
+/processor:CpuAnimatedModelProcessor
+/processorParam:VertexBufferType=DynamicWriteOnly
+/processorParam:IndexBufferType=Default
+/processorParam:MaxBones=72
+/processorParam:GenerateKeyframesFrequency=0
+/processorParam:FixRealBoneRoot=False
+/processorParam:ColorKeyColor=0,0,0,0
+/processorParam:ColorKeyEnabled=True
+/processorParam:DefaultEffect=BasicEffect
+/processorParam:GenerateMipmaps=True
+/processorParam:GenerateTangentFrames=False
+/processorParam:PremultiplyTextureAlpha=True
+/processorParam:PremultiplyVertexColors=True
+/processorParam:ResizeTexturesToPowerOfTwo=False
+/processorParam:RotationX=0
+/processorParam:RotationY=0
+/processorParam:RotationZ=-90
+/processorParam:Scale=0.012
+/processorParam:SwapWindingOrder=False
+/processorParam:TextureFormat=Compressed
+/build:entities/rossem/rossem_new.fbx
 
 #begin entities/rossem/rossem-animated.fbx
 /importer:FbxImporter
@@ -75,6 +111,42 @@
 /processorParam:SwapWindingOrder=False
 /processorParam:TextureFormat=Compressed
 /build:entities/rossem/rossem-animated.fbx;entities/rossem/rossem.fbx
+
+#begin entities/zombie/zombo-01.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:entities/zombie/zombo-01.png
+
+#begin entities/zombie/zombol_rigged.fbx
+/importer:FbxImporter
+/processor:CpuAnimatedModelProcessor
+/processorParam:VertexBufferType=DynamicWriteOnly
+/processorParam:IndexBufferType=Default
+/processorParam:MaxBones=72
+/processorParam:GenerateKeyframesFrequency=0
+/processorParam:FixRealBoneRoot=False
+/processorParam:ColorKeyColor=0,0,0,0
+/processorParam:ColorKeyEnabled=True
+/processorParam:DefaultEffect=BasicEffect
+/processorParam:GenerateMipmaps=True
+/processorParam:GenerateTangentFrames=False
+/processorParam:PremultiplyTextureAlpha=True
+/processorParam:PremultiplyVertexColors=True
+/processorParam:ResizeTexturesToPowerOfTwo=False
+/processorParam:RotationX=0
+/processorParam:RotationY=0
+/processorParam:RotationZ=0
+/processorParam:Scale=1
+/processorParam:SwapWindingOrder=False
+/processorParam:TextureFormat=Compressed
+/build:entities/zombie/zombol_rigged.fbx
 
 #begin fonts/coordinateFont.spritefont
 /importer:FontDescriptionImporter
@@ -242,40 +314,4 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:textures/tile.png
-
-#begin zombo-01.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:zombo-01.png
-
-#begin zombol_rigged.fbx
-/importer:FbxImporter
-/processor:CpuAnimatedModelProcessor
-/processorParam:VertexBufferType=DynamicWriteOnly
-/processorParam:IndexBufferType=Default
-/processorParam:MaxBones=72
-/processorParam:GenerateKeyframesFrequency=0
-/processorParam:FixRealBoneRoot=False
-/processorParam:ColorKeyColor=0,0,0,0
-/processorParam:ColorKeyEnabled=True
-/processorParam:DefaultEffect=BasicEffect
-/processorParam:GenerateMipmaps=True
-/processorParam:GenerateTangentFrames=False
-/processorParam:PremultiplyTextureAlpha=True
-/processorParam:PremultiplyVertexColors=True
-/processorParam:ResizeTexturesToPowerOfTwo=False
-/processorParam:RotationX=0
-/processorParam:RotationY=0
-/processorParam:RotationZ=0
-/processorParam:Scale=0.002
-/processorParam:SwapWindingOrder=False
-/processorParam:TextureFormat=Compressed
-/build:zombol_rigged.fbx
 

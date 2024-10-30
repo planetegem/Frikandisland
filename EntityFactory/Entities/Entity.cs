@@ -1,34 +1,30 @@
-﻿using Frikandisland.Content;
-using System;
+﻿using System;
 
 namespace EntityFactory.Entities
 {
     // Entity state is currently tracked in the entity itself because of laziness
     // Later on, this will probably be moved to a component specialized in tracking state
-    public enum EntityStates
-    {
-        idle = 0,
-        backtracking = 1,
-        walking = 2,
-        running = 3
-    }
-    internal abstract class Entity
+
+    public abstract class Entity
     {
         public readonly string id;
-        public EntityStates state;
 
-        public Entity(string id, EntityStates state = default)
+        // Constructor: apply name to entity
+        public Entity(string id)
         {
             try
             {
-                this.id = id + AssetLoader.EntityCount;
+                this.id = id + entityCount;
             }
             catch (Exception e)
             {
                 System.Diagnostics.Debug.WriteLine(e);
                 this.id = id;
             }
-            this.state = state;
         }
+
+        // Count amount of entities created (part of naming scheme)
+        private static int entityCount = 0;
+
     }
 }

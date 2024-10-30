@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Frikandisland.Systems;
 using EntityFactory.Entities;
-using Frikandisland.Content;
+using EntityFactory.Systems;
 
 namespace EntityFactory
 {
@@ -43,13 +43,14 @@ namespace EntityFactory
 
         protected override void Initialize()
         {
-            entitySystem = EntitySystem.getInstance();
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
             entityLoader = AssetLoader.GetInstance(Content);
+            entitySystem = EntitySystem.getInstance();
+
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
             font = Content.Load<SpriteFont>("fonts/coordinateFont");

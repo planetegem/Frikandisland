@@ -35,9 +35,6 @@ technique Ambient
 {
     pass Pass1
     {
-        AlphaBlendEnable = TRUE;
-        DestBlend = INVSRCALPHA;
-        SrcBlend = SRCALPHA;
         VertexShader = compile vs_2_0 VertexShaderFunction();
         PixelShader = compile ps_2_0 PixelShaderFunction();
     }

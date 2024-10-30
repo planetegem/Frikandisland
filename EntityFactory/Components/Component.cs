@@ -3,7 +3,7 @@ using Frikandisland.Systems;
 
 namespace EntityFactory.Components
 {
-    abstract class Component
+    public abstract class Component
     {
         // Every component keeps track of parent entity
         public readonly Entity parent;

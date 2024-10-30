@@ -1,9 +1,9 @@
-﻿using Frikandisland.Content;
-using EntityFactory.Entities;
+﻿using EntityFactory.Entities;
 using Frikandisland.Utilities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
+using EntityFactory.Systems;
 
 namespace EntityFactory.Components.Positioning
 {

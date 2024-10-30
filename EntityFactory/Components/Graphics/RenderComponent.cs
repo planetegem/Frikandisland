@@ -14,7 +14,11 @@ namespace EntityFactory.Components.Graphics
 
         // Apply custom shader (default is main shader)
         protected ShaderComponent shader;
-        public ShaderComponent Shader { set { shader = value; } }
+        public ShaderComponent Shader 
+        { 
+            set { shader = value; } 
+            get { return shader; }
+        }
 
         // Entity's PositionComponent provides coordinates & rotation
         protected PositionComponent positioner;

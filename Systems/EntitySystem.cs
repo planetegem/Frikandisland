@@ -2,12 +2,12 @@
 using EntityFactory.Components.Positioning;
 using EntityFactory.Components.Graphics;
 using EntityFactory.Components.Input;
-using EntityFactory.Entities;
 using Frikandisland.Utilities;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
-using EntityFactory.EntityFactory.Components;
+using EntityFactory.Systems;
+using EntityFactory.Components.State;
 
 namespace Frikandisland.Systems
 {
@@ -28,45 +28,37 @@ namespace Frikandisland.Systems
                 lock (instanceLock)
                 {
                     if (instance == null)
-                        instance = new EntitySystem();      
+                    {
+                        instance = new EntitySystem();
+                        CameraPosition cam = instance.renderAssistant.Camera;
+                    }
                 }
             }
             return instance;
         }
 
-        // Player & camera props
-        public static PositionComponent Leader 
+        // Constructor is private to hide it
+        private EntitySystem() 
         {
-            set
-            {
-                if (instance is null) 
-                    throw new Exception("Invalid instance of EntitySystem: tried to initialize camera without system");
-                
-                Camera camera = new Camera(value);
-            }
-        }
-        private CameraPosition camera;
-        public static CameraPosition Camera
-        {
-            set
-            {
-                if (instance is null) 
-                    throw new Exception("Invalid instance of EntitySystem: tried to initialize camera without system");
-                
-                instance.camera = value;
-            }
+            renderAssistant = new RenderAssistant();
         }
 
-        // Constructor is private to hide it
-        private EntitySystem() { }
+        // Player & camera props
+        public static void AssignLeader(PositionComponent leader)
+        {
+            if (instance is null)
+                throw new Exception("Invalid instance of EntitySystem: tried to initialize camera without system");
+
+            instance.renderAssistant.SetFocalPoint(leader);
+        }
 
         // Register components
-        private List<RenderComponent> renderComponents = new List<RenderComponent>();
-        private List<AnimationComponent> animationComponents = new List<AnimationComponent>();
         private List<InputComponent> inputComponents = new List<InputComponent>();
         private List<BoundingComponent> boundingComponents = new List<BoundingComponent>();
         private List<PositionComponent> positionComponents = new List<PositionComponent>();
-        private List<TilePropsComponent> tilePropsComponents = new List<TilePropsComponent>();
+        private List<TileProps> tilePropsComponents = new List<TileProps>();
+
+        private RenderAssistant renderAssistant;
 
         public static void RegisterComponent(Component[] components)
         {
@@ -84,17 +76,18 @@ namespace Frikandisland.Systems
                 throw new Exception("Invalid instance of EntitySystem: set instance of EntitySystem during game start");
 
             if (component is RenderComponent)            
-                instance.renderComponents.Add((RenderComponent)component);
+                instance.renderAssistant.Register((RenderComponent)component);
             if (component is AnimationComponent)
-                instance.animationComponents.Add((AnimationComponent)component);
+                instance.renderAssistant.Register((AnimationComponent)component);
+                
             if (component is InputComponent)
                 instance.inputComponents.Add((InputComponent)component);
             if (component is BoundingComponent)
                 instance.boundingComponents.Add((BoundingComponent)component);
             if (component is PositionComponent)
                 instance.positionComponents.Add((PositionComponent)component);
-            if (component is TilePropsComponent)
-                instance.tilePropsComponents.Add((TilePropsComponent)component);
+            if (component is TileProps)
+                instance.tilePropsComponents.Add((TileProps)component);
         }
 
         // Phase 1: input components propose changes to position components
@@ -123,7 +116,7 @@ namespace Frikandisland.Systems
 
             // Make list of all tiles with collision enabled
             List<BoundingArea> tiles = new List<BoundingArea>();
-            foreach (TilePropsComponent tile in instance.tilePropsComponents)
+            foreach (TileProps tile in instance.tilePropsComponents)
             {
                 if (tile.collision) tiles.Add(tile.bounds);
             }
@@ -154,35 +147,16 @@ namespace Frikandisland.Systems
             if (instance is null)
                 throw new Exception("Invalid instance of EntitySystem: set instance of EntitySystem during game start");
 
-            foreach (AnimationComponent component in instance.animationComponents)
-            {
-                try
-                {
-                    component.Update(gt);
-                }
-                catch (Exception e)
-                {
-                    System.Diagnostics.Debug.WriteLine($"Error on entity {component.getParentId()}: {e}");
-                }
-            }
+            instance.renderAssistant.Animate(gt);
         }
+
         // Phase 4: Render components are fired to draw entity in viewport
         public static void Render(Matrix projection, bool debug)
         {
             if (instance is null)
                 throw new Exception("Invalid instance of EntitySystem: set instance of EntitySystem during game start");
 
-            // First update camera
-            foreach(RenderComponent component in instance.renderComponents)
-            {
-                try { 
-                    component.Draw(projection, instance.camera.View);
-                }
-                catch (Exception e)
-                {
-                    System.Diagnostics.Debug.WriteLine($"Error on entity {component.getParentId()}: {e}");
-                }
-            }
+            instance.renderAssistant.Render(projection);
 
             if (debug)
             {
@@ -190,7 +164,7 @@ namespace Frikandisland.Systems
                 {
                     try
                     {
-                        component.RenderBounds(projection, instance.camera.View);
+                        component.RenderBounds(projection, instance.renderAssistant.Camera.View);
                     }
                     catch (Exception e)
                     {

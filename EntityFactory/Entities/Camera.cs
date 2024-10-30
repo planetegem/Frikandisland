@@ -6,11 +6,15 @@ namespace EntityFactory.Entities
 {
     class Camera : Entity
     {
-        public Camera(PositionComponent leader) : base("camera")
+        public Camera() : base("camera")
         {
-            CameraPosition positioner = new CameraPosition(this,leader);
+
+        }
+        public CameraPosition Construct()
+        {
+            CameraPosition positioner = new CameraPosition(this);
             CameraController controller = new CameraController(this, positioner);
-            EntitySystem.Camera = positioner;
+            return positioner;
         }
     }
 }

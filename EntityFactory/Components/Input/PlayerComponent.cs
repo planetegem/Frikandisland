@@ -3,13 +3,19 @@ using Microsoft.Xna.Framework;
 using System;
 using EntityFactory.Components.Positioning;
 using EntityFactory.Entities;
+using EntityFactory.Components.State;
 
 namespace EntityFactory.Components.Input
 {
     // SimpleKeyBoard: rotate left & right controlled by keyboard; no mouse = no strafing
     internal class SimpleKeyboard : InputComponent
     {
-        public SimpleKeyboard(Entity parent) : base(parent) { }
+        private EntityBrain brain;
+
+        public SimpleKeyboard(Entity parent, EntityBrain brain) : base(parent) 
+        { 
+            this.brain = brain;
+        }
 
         // Parameters that adjust the feel of input
         private float accelerationRate = 0.0025f;
@@ -45,7 +51,7 @@ namespace EntityFactory.Components.Input
             if (keyboard.IsKeyDown(Keys.Right))
                 positioner.ProposedAngle -= turnRate;
 
-            parent.state = EntityStates.idle;
+            brain.state = EntityStates.idle;
 
             float maxForwardSpeed = maxSpeed;
             // Check for forwards or backwards movement
@@ -53,19 +59,19 @@ namespace EntityFactory.Components.Input
             if (keyboard.IsKeyDown(Keys.Down))
             {
                 direction = -1;
-                parent.state = EntityStates.backtracking;
+                brain.state = EntityStates.backtracking;
             }
             else if (keyboard.IsKeyDown(Keys.Up))
             {
                 direction = 1;
                 if (keyboard.IsKeyDown(Keys.LeftShift))
                 {
-                    parent.state = EntityStates.running;
+                    brain.state = EntityStates.running;
                     maxForwardSpeed = maxSpeed * 2.5f;
                 } 
                 else
                 {
-                    parent.state = EntityStates.walking;
+                    brain.state = EntityStates.walking;
                 }
             }
             float forwardMomentum = direction * accelerationRate + momentum.Y;

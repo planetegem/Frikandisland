@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Content>
+	<!--shaders-->
+	<Effect alias="ambient" location="effects/AmbientShader"></Effect>
+	<Effect alias="transparent" location="effects/TransparentShader"></Effect>
+	<Effect alias="flat" location="effects/FlatShader"></Effect>
+	<Effect alias="normal" location="effects/NormalShader"></Effect>
+	<Effect alias="riemer" location="effects/RiemerShader"></Effect>
+
+	<!--general textures-->
+	<Texture alias="error" location="textures/error"></Texture>
+	<Texture alias="tile" location="textures/tile"></Texture>
+
+	<!--general models-->
+	<Model alias="circle" location="models/circle"></Model>
+	<Model alias="square" location="models/square"></Model>
+	<Model alias="tile" location="models/tile"></Model>
+	<Model alias="percolator" location="models/percolator"></Model>
+
+	<!--rossem-->
+	<Model alias="rossem" location="entities/rossem/rossem_new"></Model>
+	<Texture alias="rossem" location="entities/rossem/rossem_diffuse"></Texture>
+
+	<!--zombie-->
+	<Model alias="zombie" location="entities/zombie/zombol_rigged"></Model>
+	<Texture alias="zombie" location="entities/zombie/zombo-01"></Texture>
+	
+</Content>

@@ -3,7 +3,7 @@ using EntityFactory.Entities;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using System;
-using Frikandisland.Content;
+using EntityFactory.Systems;
 
 namespace EntityFactory.Components.Graphics
 {
@@ -19,8 +19,7 @@ namespace EntityFactory.Components.Graphics
                 try
                 {
                     texture = AssetLoader.GetTexture(modelName);
-                    shader = new NormalShader(parent, texture);
-
+                    shader = new FlatShader(parent, texture);
                 }
                 catch (Exception e)
                 {

@@ -3,7 +3,7 @@ using EntityFactory.Entities;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using System;
-using Frikandisland.Content;
+using EntityFactory.Systems;
 
 namespace EntityFactory.Components.Graphics
 {

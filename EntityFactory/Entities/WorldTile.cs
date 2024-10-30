@@ -1,6 +1,6 @@
 ﻿using EntityFactory.Components.Graphics;
 using EntityFactory.Components.Positioning;
-using EntityFactory.EntityFactory.Components;
+using EntityFactory.Components.State;
 using Microsoft.Xna.Framework;
 
 namespace EntityFactory.Entities
@@ -14,7 +14,7 @@ namespace EntityFactory.Entities
             PositionComponent positioner = new PositionComponent(this, pos);
 
             // Props component: tracks bounds and state
-            TilePropsComponent props = new TilePropsComponent(this, positioner, !tile);
+            TileProps props = new TileProps(this, positioner, !tile);
 
             // Render component
             if (tile)

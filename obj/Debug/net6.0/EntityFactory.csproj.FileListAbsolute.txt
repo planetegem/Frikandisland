@@ -189,9 +189,6 @@ C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug
 C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\textures\square.xnb
 C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\textures\square2.xnb
 C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\textures\tile.xnb
-C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\zombo-01.xnb
-C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\zombo-01_0.xnb
-C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\zombol_rigged.xnb
 C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\EntityFactory.exe
 C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\EntityFactory.deps.json
 C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\EntityFactory.runtimeconfig.json
@@ -236,3 +233,10 @@ C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug
 C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\entities\rossem\rossem-animated.xnb
 C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\entities\rossem\blender files\zombo-01_0.xnb
 C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\entities\rossem\zombo-01_0.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\effects\RiemerShader.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\entities\rossem\rossem_new.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\Assets.xml
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\entities\zombie\zombo-01.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\entities\zombie\zombo-01_0.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\entities\zombie\zombol_rigged.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\effects\TransparentShader.xnb

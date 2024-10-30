@@ -1,8 +1,8 @@
-﻿using Frikandisland.Content;
-using EntityFactory.Entities;
+﻿using EntityFactory.Entities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
+using EntityFactory.Systems;
 
 
 namespace EntityFactory.Components.Graphics
@@ -11,6 +11,9 @@ namespace EntityFactory.Components.Graphics
     {
         protected Effect effect = null;
         public Effect Effect { get { return effect; } }
+
+        protected bool transparent = false;
+        public bool Transparent { get { return transparent; } }
 
         public void SetEffect(string effectName)
         {

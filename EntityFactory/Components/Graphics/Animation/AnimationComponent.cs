@@ -1,4 +1,5 @@
 ﻿using Aether.Animation;
+using EntityFactory.Components.State;
 using EntityFactory.Entities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -10,8 +11,14 @@ namespace EntityFactory.Components.Graphics
     // Responsible for updating bone positions on model
     internal class AnimationComponent : Component
     {
+        // Dictionary of animations (loaded from fbx)
         private Animations animations;
+
+        // State props (save previous state for comparison)
         private EntityStates animationState;
+
+        private EntityBrain brain;
+        public EntityBrain Brain { set { brain = value; } }
 
         // Set AnimationDictionary to save names of different animations
         private AnimationDictionary dictionary;
@@ -46,9 +53,9 @@ namespace EntityFactory.Components.Graphics
                 throw new Exception($"Warning: animations for {parent.id} were not set");
 
             // Check if animation needs to be changed
-            if (animationState != parent.state)
+            if (animationState != brain.state)
             {
-                animationState = parent.state;
+                animationState = brain.state;
                 switch (animationState)
                 {
                     case EntityStates.walking:
@@ -77,9 +84,5 @@ namespace EntityFactory.Components.Graphics
 
             part.UpdateVertices(animations.AnimationTransforms);
         }
-
-
-
-
     }
 }

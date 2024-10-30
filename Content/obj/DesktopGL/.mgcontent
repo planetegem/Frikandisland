@@ -7,8 +7,12 @@
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/effects/AmbientShader.fx</File>
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/effects/FlatShader.fx</File>
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/effects/NormalShader.fx</File>
+    <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/effects/RiemerShader.fx</File>
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/entities/rossem/rossem_diffuse.png</File>
+    <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/entities/rossem/rossem_new.fbx</File>
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/entities/rossem/rossem-animated.fbx</File>
+    <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/entities/zombie/zombo-01.png</File>
+    <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/entities/zombie/zombol_rigged.fbx</File>
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/fonts/coordinateFont.spritefont</File>
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/models/circle.fbx</File>
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/models/percolator.fbx</File>
@@ -20,10 +24,10 @@
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/textures/square.png</File>
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/textures/square2.png</File>
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/textures/tile.png</File>
-    <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/zombo-01.png</File>
-    <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/zombol_rigged.fbx</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

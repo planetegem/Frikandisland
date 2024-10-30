@@ -6,8 +6,18 @@ namespace EntityFactory.Components.Positioning
 {
     internal class CameraPosition : Component
     {
+        // Constructor: set leader as basic positon component
+        public CameraPosition(Entity parent) : base(parent)
+        {
+            this.leader = new PositionComponent(parent);
+        }
+
         // Look-at point = position of player
         private PositionComponent leader;
+        public PositionComponent Leader
+        {
+            set { this.leader = value; }
+        }
 
         // Angle (on the horizontal plane)
         private float angle = MathHelper.ToRadians(90f);
@@ -46,23 +56,34 @@ namespace EntityFactory.Components.Positioning
         // Base distance: multiplied with magnification for real distance to look-at-point
         private float distance = 10f;
 
-        // Return final matrix
-        public Matrix View 
-        { 
-            get 
+        // Camera Location: saved seperately for use in specular lighting shader
+        public Vector3 CameraLocation
+        {
+            get
             {
                 float xPos = (float)Math.Sin(angle) * magnification * distance * (float)Math.Sin(pivot) + leader.X;
                 float yPos = (float)Math.Cos(angle) * magnification * distance * (float)Math.Sin(pivot) + leader.Y;
                 float zPos = (float)Math.Cos(pivot) * magnification * distance;
 
-                return Matrix.CreateLookAt(new Vector3(xPos, yPos, zPos), new Vector3(leader.Position, 0), Vector3.UnitZ); ; 
+                return new Vector3(xPos, yPos, zPos);
+            }
+        }
+        // Camera Lookat: position of leader, z-pos 0
+        public Vector3 CameraLookAt
+        {
+            get
+            {
+                return new Vector3(leader.Position, 0);
+            }
+        }
+
+        // Return final matrix
+        public Matrix View 
+        { 
+            get 
+            {
+                return Matrix.CreateLookAt(CameraLocation, CameraLookAt, Vector3.UnitZ); ; 
             } 
         }
-
-        public CameraPosition(Entity parent, PositionComponent leader) : base(parent)
-        {
-            this.leader = leader;
-        }
-
     }
 }
