@@ -69,8 +69,8 @@ namespace EntityFactory.Systems
             {
                 try
                 {
-                    if (!component.Shader.Transparent)
-                        component.Draw(projection, camera.View);
+                    if (component.Shader != null && !component.Shader.Transparent)
+                        component.Draw(projection, camera.View, camera.ViewVector);
                 }
                 catch (Exception e)
                 {
@@ -83,8 +83,8 @@ namespace EntityFactory.Systems
             {
                 try
                 {
-                    if (component.Shader.Transparent)
-                        component.Draw(projection, camera.View);
+                    if (component.Shader != null && component.Shader.Transparent)
+                        component.Draw(projection, camera.View, camera.ViewVector);
                 }
                 catch (Exception e)
                 {

@@ -5,7 +5,6 @@ using System;
 using EntityFactory.Systems;
 using Frikandisland.Systems;
 using EntityFactory.Components.State;
-using EntityFactory.Components.Graphics.Shaders;
 
 namespace EntityFactory.Components.Graphics
 {
@@ -23,70 +22,25 @@ namespace EntityFactory.Components.Graphics
         // Again dual constructor: either model & texture are the same, or texture is explicitly defined
         public AnimatedModel(string parent, string model) : base(parent)
         {
-            try
-            {
-                this.model = AssetLoader.GetModel(model);
-                try
-                {
-                    texture = AssetLoader.GetTexture(model);
-                }
-                catch (Exception e)
-                {
-                    FrikanLogger.Write($"Error setting texture for {parent}: {e}");
-                    texture = AssetLoader.GetTexture("error");
-                }
-            }
+            try { this.model = AssetLoader.GetModel(model); }
             catch (Exception e)
             {
                 FrikanLogger.Write($"Error setting model for {parent}: {e}");
                 this.model = AssetLoader.GetModel("percolator");
             }
             animator = new AnimationComponent(parent, this.model);
-            shader = new MainShader(parent, texture);
         }
-        public AnimatedModel(string parent, string model, string texture) : base(parent)
-        {
-            try
-            {
-                this.model = AssetLoader.GetModel(model);
-                try
-                {
-                    this.texture = AssetLoader.GetTexture(texture);
-                }
-                catch (Exception e)
-                {
-                    FrikanLogger.Write($"Error setting texture for {parent}: {e}");
-                    this.texture = AssetLoader.GetTexture("error");
-                }
-            }
-            catch (Exception e)
-            {
-                FrikanLogger.Write($"Error setting model for {parent}: {e}");
-                this.model = AssetLoader.GetModel("percolator");
-            }
-
-            shader = new FlatShader(parent, this.texture);
-            animator = new AnimationComponent(parent, this.model);
-        }
-
+        
         // Main draw function: also call update logic from AnimationComponent
-        public override void Draw(Matrix projection, Matrix view)
+        public override void Draw(Matrix projection, Matrix view, Vector3 viewVector)
         {
             // Error logging
-            if (positioner == null)
+            CheckRequiredParts();
+
+            if (shader == null)
             {
-                positioner = new PositionComponent("SimpleModelError");
-                FrikanLogger.Write($"No position found for {parent}: assign a PositionComponent in entity constructor");
-            }
-            if (model == null)
-            {
-                model = AssetLoader.GetModel("percolator");
-                FrikanLogger.Write($"No model loaded when rendering component for {parent}; switching to percolator");
-            }
-            if (texture == null)
-            {
-                texture = AssetLoader.GetTexture("error");
-                FrikanLogger.Write($"No model loaded when rendering component for {parent}; switching to error texture");
+                FrikanLogger.Write($"No shader found for {parent}: switching to basic ambient shader. Set shader in entity constructor.");
+                shader = new AmbientShader(parent);
             }
 
             // Actual draw function: also calls AnimationComponent logic to update bone positions
@@ -103,7 +57,7 @@ namespace EntityFactory.Components.Graphics
                     else
                     {
                         part.Effect = shader.Effect;
-                        shader.SetParameters(world, view, projection);
+                        shader.SetParameters(world, view, viewVector, projection);
                         animator.ApplyUpdateToRender(part);
                     }
                 }

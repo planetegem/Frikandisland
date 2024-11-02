@@ -26,7 +26,7 @@ namespace EntityFactory.Entities
             inputer.Positioner = positioner;
 
             // Step 3: renderer
-            SimpleModel renderer = new SimpleModel(this.id, "percolator");
+            StaticModel renderer = new StaticModel(this.id, "percolator");
             renderer.Positioner = positioner;
             renderer.EnableStandardEffect = true;
 

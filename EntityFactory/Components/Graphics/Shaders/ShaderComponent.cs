@@ -28,6 +28,6 @@ namespace EntityFactory.Components.Graphics
             }
         }
         protected ShaderComponent(string parent) : base(parent) { }
-        public abstract void SetParameters(Matrix world, Matrix view, Matrix projection);
+        public abstract void SetParameters(Matrix world, Matrix view, Vector3 viewVector, Matrix projection);
     }
 }

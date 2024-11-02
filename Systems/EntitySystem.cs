@@ -149,7 +149,7 @@ namespace Frikandisland.Systems
 
             instance.renderAssistant.Animate(gt);
         }
-
+        
         // Phase 4: Render components are fired to draw entity in viewport
         public static void Render(Matrix projection, bool debug)
         {

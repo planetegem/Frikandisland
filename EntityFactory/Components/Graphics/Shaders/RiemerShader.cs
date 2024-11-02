@@ -26,7 +26,7 @@ namespace EntityFactory.Components.Graphics.Shaders
             this.SetEffect("riemer");
             Texture = "rossem";
         }
-        public override void SetParameters(Matrix world, Matrix view, Matrix projection)
+        public override void SetParameters(Matrix world, Matrix view, Vector3 viewVector, Matrix projection)
         {
             effect.CurrentTechnique = effect.Techniques["Simplest"];
             effect.Parameters["xViewProjection"].SetValue(world * view * projection);

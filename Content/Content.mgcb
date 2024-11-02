@@ -34,6 +34,12 @@
 /processorParam:DebugMode=Auto
 /build:effects/BlankDiffuseShader.fx
 
+#begin effects/BlankSpecularShader.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:effects/BlankSpecularShader.fx
+
 #begin effects/DiffuseShader.fx
 /importer:EffectImporter
 /processor:EffectProcessor
@@ -51,6 +57,12 @@
 /processor:EffectProcessor
 /processorParam:DebugMode=Auto
 /build:effects/RiemerShader.fx
+
+#begin effects/SpecularShader.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:effects/SpecularShader.fx
 
 #begin effects/TransparentShader.fx
 /importer:EffectImporter

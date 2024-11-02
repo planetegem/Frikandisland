@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using EntityFactory.Components.Positioning;
+using EntityFactory.Systems;
+using Frikandisland.Systems;
 
 namespace EntityFactory.Components.Graphics
 {
@@ -8,7 +10,6 @@ namespace EntityFactory.Components.Graphics
     {
         // Model & Texture
         protected Model model;
-        protected Texture2D texture;
 
         // Apply custom shader (default is main shader)
         protected ShaderComponent shader;
@@ -26,21 +27,32 @@ namespace EntityFactory.Components.Graphics
         public RenderComponent(string parent) : base(parent) { }
 
         // RenderComponents always have a Draw method
-        public abstract void Draw(Matrix projection, Matrix view);
+        public abstract void Draw(Matrix projection, Matrix view, Vector3 viewVector);
 
         // Standard effect configuration for MonoGame (fallback in case of shader failure)
         public bool EnableStandardEffect = false;
-        protected void StandardEffect(BasicEffect effect, Matrix world, Matrix view, Matrix projection, Texture2D texture = null)
+        protected void StandardEffect(BasicEffect effect, Matrix world, Matrix view, Matrix projection)
         {
-            if (texture != null)
-            {
-                effect.Texture = texture;
-                effect.TextureEnabled = true;
-            }
+            effect.TextureEnabled = false;
             effect.EnableDefaultLighting();
             effect.World = world;
             effect.View = view;
             effect.Projection = projection;
+        }
+        
+        // Other defaults and error logging
+        protected void CheckRequiredParts()
+        {
+            if (positioner == null)
+            {
+                positioner = new PositionComponent("SimpleModelError");
+                FrikanLogger.Write($"No position found for {parent}: assign a PositionComponent in entity constructor");
+            }
+            if (model == null)
+            {
+                model = AssetLoader.GetModel("percolator");
+                FrikanLogger.Write($"No model loaded when rendering component for {parent}; switching to percolator");
+            }
         }
     }
 

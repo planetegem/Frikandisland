@@ -7,6 +7,9 @@
 	<Effect alias="diffuse" location="effects/DiffuseShader"></Effect>
 	<Effect alias="riemer" location="effects/RiemerShader"></Effect>
 	<Effect alias="blankDiffuse" location="effects/BlankDiffuseShader"></Effect>
+	<Effect alias="blankSpecular" location="effects/BlankSpecularShader"></Effect>
+	<Effect alias="specular" location="effects/SpecularShader"></Effect>
+
 
 	<!--general textures-->
 	<Texture alias="error" location="textures/error"></Texture>

@@ -14,11 +14,25 @@ namespace Frikandisland.Systems
             get { return shaderLevel; }
             set 
             { 
-                shaderLevel = Math.Clamp(value, 0, 3);
+                shaderLevel = Math.Clamp(value, -3, 3);
+                shaderNeedsUpdate = true;
+
+
+            }
+
+        }
+
+        public static bool isTextured = false;
+        public static bool IsTextured {
+            set
+            {
+                isTextured = value;
                 shaderNeedsUpdate = true;
             }
         }
+
         public static bool shaderNeedsUpdate = false;
+        
      
 
 

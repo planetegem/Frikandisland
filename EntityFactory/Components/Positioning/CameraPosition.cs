@@ -77,6 +77,15 @@ namespace EntityFactory.Components.Positioning
             }
         }
 
+        // Get view vector (used for specular lighting)
+        public Vector3 ViewVector
+        {
+            get
+            {
+                return Vector3.Transform(CameraLookAt - CameraLocation, Matrix.CreateRotationZ(0));
+            }
+        }
+
         // Return final matrix
         public Matrix View 
         { 

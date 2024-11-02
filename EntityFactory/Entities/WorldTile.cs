@@ -1,6 +1,7 @@
 ﻿using EntityFactory.Components.Graphics;
 using EntityFactory.Components.Positioning;
 using EntityFactory.Components.State;
+using EntityFactory.Systems;
 using Microsoft.Xna.Framework;
 
 namespace EntityFactory.Entities
@@ -19,8 +20,10 @@ namespace EntityFactory.Entities
             // Render component
             if (tile)
             {
-                TexturedModel renderer = new TexturedModel(this.id, "tile", texture);
+                
+                StaticModel renderer = new StaticModel(this.id, "tile");
                 renderer.Positioner = positioner;
+                renderer.Shader = new DiffuseShader(this.id, texture);
             }
 
         }

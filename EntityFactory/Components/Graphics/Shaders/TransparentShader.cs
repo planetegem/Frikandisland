@@ -14,7 +14,7 @@ namespace EntityFactory.Components.Graphics
         public Vector4 color = new Vector4(0.5f, 0.5f, 0.5f, 1f);
         public float intensity = 0.1f;
 
-        public override void SetParameters(Matrix world, Matrix view, Matrix projection)
+        public override void SetParameters(Matrix world, Matrix view, Vector3 viewVector, Matrix projection)
         {
             // Base paramters
             effect.Parameters["World"].SetValue(world);

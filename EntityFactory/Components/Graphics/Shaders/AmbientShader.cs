@@ -1,5 +1,4 @@
-﻿using EntityFactory.Entities;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 
 namespace EntityFactory.Components.Graphics
 {
@@ -13,7 +12,7 @@ namespace EntityFactory.Components.Graphics
         public Vector4 ambientColor = new Vector4(0.5f, 0.5f, 0.5f, 0.5f);
         public float ambientIntensity = 1f;
 
-        public override void SetParameters(Matrix world, Matrix view, Matrix projection)
+        public override void SetParameters(Matrix world, Matrix view, Vector3 viewVector, Matrix projection)
         {
             // Base paramters
             effect.Parameters["World"].SetValue(world);
