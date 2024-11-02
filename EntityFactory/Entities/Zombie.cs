@@ -12,24 +12,24 @@ namespace EntityFactory.Entities
     {
         public Zombie(float x = 0f, float y = 0f) : base("zombie")
         {
-            EntityBrain brain = new EntityBrain(this);
+            EntityBrain brain = new EntityBrain(this.id);
 
             // Step 1: set position component
             Vector2 startPos = new Vector2(x, y);
-            PositionComponent positioner = new PositionComponent(this, startPos);
+            PositionComponent positioner = new PositionComponent(this.id, startPos);
 
             // Step 2: set renderer (and if animated, animation names)
-            AnimatedModel renderer = new AnimatedModel(this, positioner, "zombie");
-            renderer.Animator.Dictionary = new AnimationDictionary("Armature|ArmatureAction");
-            renderer.Animator.Brain = brain;
-            renderer.Shader = new RiemerShader(this);
+            AnimatedModel renderer = new AnimatedModel(this.id, "zombie");
+            renderer.ConfigureAnimations(new AnimationDictionary("Armature|ArmatureAction"), brain);
+            renderer.Positioner = positioner;
+            renderer.Shader = new RiemerShader(this.id);
 
             // Step 3: set input & bounding
             BoundingArea[] bBoxes = new BoundingArea[]{
                 new BoundingCircle(new Vector2(0, 0), 0.25f)
                 };
-            BoundingComponent bounder = new BoundingComponent(this, positioner, bBoxes);
-            SimpleKeyboard inputer = new SimpleKeyboard(this, brain);
+            BoundingComponent bounder = new BoundingComponent(this.id, positioner, bBoxes);
+            SimpleKeyboard inputer = new SimpleKeyboard(this.id, brain);
             inputer.Positioner = positioner;
 
         }

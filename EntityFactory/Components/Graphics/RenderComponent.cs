@@ -1,12 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using EntityFactory.Components.Positioning;
-using EntityFactory.Entities;
-
 
 namespace EntityFactory.Components.Graphics
 {
-    abstract class RenderComponent : Component
+    public abstract class RenderComponent : Component
     {
         // Model & Texture
         protected Model model;
@@ -22,12 +20,10 @@ namespace EntityFactory.Components.Graphics
 
         // Entity's PositionComponent provides coordinates & rotation
         protected PositionComponent positioner;
+        public PositionComponent Positioner { set { positioner = value; } }
 
         // Parent is saved as part of Component constructor
-        public RenderComponent(Entity parent, PositionComponent positioner) : base(parent)
-        {
-            this.positioner = positioner;
-        }
+        public RenderComponent(string parent) : base(parent) { }
 
         // RenderComponents always have a Draw method
         public abstract void Draw(Matrix projection, Matrix view);

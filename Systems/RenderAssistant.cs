@@ -56,7 +56,7 @@ namespace EntityFactory.Systems
                 }
                 catch (Exception e)
                 {
-                    FrikanLogger.Write($"Error on entity {component.getParentId()}: {e}");
+                    FrikanLogger.Write($"Error on entity {component.parent}: {e}");
                 }
             }
         }
@@ -74,7 +74,7 @@ namespace EntityFactory.Systems
                 }
                 catch (Exception e)
                 {
-                    System.Diagnostics.Debug.WriteLine($"Error on entity {component.getParentId()}: {e}");
+                    System.Diagnostics.Debug.WriteLine($"Error on entity {component.parent}: {e}");
                 }
             }
 
@@ -88,7 +88,7 @@ namespace EntityFactory.Systems
                 }
                 catch (Exception e)
                 {
-                    System.Diagnostics.Debug.WriteLine($"Error on entity {component.getParentId()}: {e}");
+                    System.Diagnostics.Debug.WriteLine($"Error on entity {component.parent}: {e}");
                 }
             }
         }

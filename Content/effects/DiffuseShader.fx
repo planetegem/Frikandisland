@@ -1,11 +1,3 @@
-#if OPENGL
-#define VS_SHADERMODEL vs_3_0
-#define PS_SHADERMODEL ps_3_0
-#else
-#define VS_SHADERMODEL vs_4_0
-#define PS_SHADERMODEL ps_4_0
-#endif
-
 float4x4 World;
 float4x4 View;
 float4x4 Projection;
@@ -63,10 +55,10 @@ float4 PixelShaderFunction(VertexShaderOutput input) : COLOR0
     float4 textureColor = tex2D(textureSampler, input.TextureCoordinate);
     textureColor.a = 1;
 
-    return saturate(textureColor * (input.Color) + AmbientColor * AmbientIntensity);
+    return saturate(textureColor * (input.Color + AmbientColor * AmbientIntensity));
 }
 
-technique BumpMap
+technique Diffuse
 {
     pass Pass1
     {

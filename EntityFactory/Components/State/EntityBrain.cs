@@ -14,7 +14,7 @@ namespace EntityFactory.Components.State
     {
         public EntityStates state;
 
-        public EntityBrain(Entity parent, EntityStates state = default) : base(parent) 
+        public EntityBrain(string parent, EntityStates state = default) : base(parent) 
         {
             this.state = state;
         }

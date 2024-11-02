@@ -1,62 +1,103 @@
 ﻿using EntityFactory.Components.Positioning;
-using EntityFactory.Entities;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using System;
 using EntityFactory.Systems;
+using Frikandisland.Systems;
+using EntityFactory.Components.State;
+using EntityFactory.Components.Graphics.Shaders;
 
 namespace EntityFactory.Components.Graphics
 {
-    // AnimatedModel: same as StaticModel, but also creates an AnimationComponent
+    // AnimatedModel: same as TexturedModel, but also creates an AnimationComponent
     class AnimatedModel : RenderComponent
     {
         // AnimationComponent updates model based on gametime
         private AnimationComponent animator;
-        public AnimationComponent Animator { get { return animator; } }
+        public void ConfigureAnimations(AnimationDictionary animationDictionary, EntityBrain brain)
+        {
+            animator.Dictionary = animationDictionary;
+            animator.Brain = brain;
+        }
 
         // Again dual constructor: either model & texture are the same, or texture is explicitly defined
-        public AnimatedModel(Entity parent, PositionComponent positioner, string model) : base(parent, positioner)
+        public AnimatedModel(string parent, string model) : base(parent)
         {
             try
             {
                 this.model = AssetLoader.GetModel(model);
-                texture = AssetLoader.GetTexture(model);
-                animator = new AnimationComponent(parent, this.model);
-                shader = new FlatShader(parent, texture);
+                try
+                {
+                    texture = AssetLoader.GetTexture(model);
+                }
+                catch (Exception e)
+                {
+                    FrikanLogger.Write($"Error setting texture for {parent}: {e}");
+                    texture = AssetLoader.GetTexture("error");
+                }
             }
             catch (Exception e)
             {
-                System.Diagnostics.Debug.WriteLine($"Error creating renderer for {parent.id}: {e}");
+                FrikanLogger.Write($"Error setting model for {parent}: {e}");
+                this.model = AssetLoader.GetModel("percolator");
             }
+            animator = new AnimationComponent(parent, this.model);
+            shader = new MainShader(parent, texture);
         }
-        public AnimatedModel(Entity parent, PositionComponent positioner, string model, string texture) : base(parent, positioner)
+        public AnimatedModel(string parent, string model, string texture) : base(parent)
         {
             try
             {
                 this.model = AssetLoader.GetModel(model);
-                this.texture = AssetLoader.GetTexture(texture);
-                animator = new AnimationComponent(parent, this.model);
+                try
+                {
+                    this.texture = AssetLoader.GetTexture(texture);
+                }
+                catch (Exception e)
+                {
+                    FrikanLogger.Write($"Error setting texture for {parent}: {e}");
+                    this.texture = AssetLoader.GetTexture("error");
+                }
             }
             catch (Exception e)
             {
-                System.Diagnostics.Debug.WriteLine($"Error creating renderer for {parent.id}: {e}");
+                FrikanLogger.Write($"Error setting model for {parent}: {e}");
+                this.model = AssetLoader.GetModel("percolator");
             }
+
+            shader = new FlatShader(parent, this.texture);
+            animator = new AnimationComponent(parent, this.model);
         }
 
         // Main draw function: also call update logic from AnimationComponent
         public override void Draw(Matrix projection, Matrix view)
         {
-            if (model == null) { throw new Exception("No model loaded when rendering component"); }
+            // Error logging
+            if (positioner == null)
+            {
+                positioner = new PositionComponent("SimpleModelError");
+                FrikanLogger.Write($"No position found for {parent}: assign a PositionComponent in entity constructor");
+            }
+            if (model == null)
+            {
+                model = AssetLoader.GetModel("percolator");
+                FrikanLogger.Write($"No model loaded when rendering component for {parent}; switching to percolator");
+            }
+            if (texture == null)
+            {
+                texture = AssetLoader.GetTexture("error");
+                FrikanLogger.Write($"No model loaded when rendering component for {parent}; switching to error texture");
+            }
 
+            // Actual draw function: also calls AnimationComponent logic to update bone positions
             Matrix world = Matrix.CreateRotationZ(positioner.Angle) * Matrix.CreateTranslation(new Vector3(positioner.Position, positioner.OffsetZ));
             foreach (ModelMesh mesh in model.Meshes)
             {
                 foreach (var part in mesh.MeshParts)
                 {
                     // Failsafe
-                    if (shader == null || texture == null)
+                    if (EnableStandardEffect | shader.Effect == null)
                     {
-                        System.Diagnostics.Debug.WriteLine($"Shader or texture for {parent.id} appear to be missing: switching to default effects");
                         StandardEffect((BasicEffect)part.Effect, world, view, projection);
                     }
                     else

@@ -12,12 +12,12 @@ namespace EntityFactory.Components.Positioning
         private BoundingArea[] bounds;
         private PositionComponent positioner;
 
-        public BoundingComponent(Entity parent, PositionComponent positioner, BoundingArea bounds) : base(parent)
+        public BoundingComponent(string parent, PositionComponent positioner, BoundingArea bounds) : base(parent)
         {
             this.positioner = positioner;
             this.bounds = new BoundingArea[] { bounds };
         }
-        public BoundingComponent(Entity parent, PositionComponent positioner, BoundingArea[] bounds) : base(parent)
+        public BoundingComponent(string parent, PositionComponent positioner, BoundingArea[] bounds) : base(parent)
         {
             this.positioner = positioner;
             this.bounds = bounds;

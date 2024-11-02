@@ -104,7 +104,7 @@ namespace Frikandisland.Systems
                 }
                 catch (Exception e)
                 {
-                    System.Diagnostics.Debug.WriteLine($"Error on entity {component.getParentId()}: {e}");
+                    System.Diagnostics.Debug.WriteLine($"Error on entity {component.parent}: {e}");
                 }
             }
         }
@@ -130,7 +130,7 @@ namespace Frikandisland.Systems
                 }
                 catch (Exception e)
                 {
-                    System.Diagnostics.Debug.WriteLine($"Error on entity {component.getParentId()}: {e}");
+                    System.Diagnostics.Debug.WriteLine($"Error on entity {component.parent}: {e}");
                 }
             }
 
@@ -168,7 +168,7 @@ namespace Frikandisland.Systems
                     }
                     catch (Exception e)
                     {
-                        System.Diagnostics.Debug.WriteLine($"Error on entity {component.getParentId()}: {e}");
+                        System.Diagnostics.Debug.WriteLine($"Error on entity {component.parent}: {e}");
                     }
                 }
             }

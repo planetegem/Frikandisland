@@ -1,16 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+
+using System;
 
 namespace Frikandisland.Systems
 {
-    internal static class ConfigMaster
+    public static class ConfigMaster
     {
 
         // Shader configs
-        public static bool textured = false;
+        public static int shaderLevel = 0;
+        public static int ShaderLevel 
+        { 
+            get { return shaderLevel; }
+            set 
+            { 
+                shaderLevel = Math.Clamp(value, 0, 3);
+                shaderNeedsUpdate = true;
+            }
+        }
+        public static bool shaderNeedsUpdate = false;
+     
 
 
 

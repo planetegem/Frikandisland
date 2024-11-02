@@ -1,13 +1,11 @@
 ﻿
 using EntityFactory.Components.Positioning;
-using EntityFactory.Entities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
-using System;
 
 namespace EntityFactory.Components.Input
 {
-    class CameraController : InputComponent
+    public class CameraController : InputComponent
     {
         // Comparison fields to process camera movement
         private int startX;
@@ -21,7 +19,7 @@ namespace EntityFactory.Components.Input
         private CameraPosition camera;
 
         // Constructor: link to camera position + get current mouse state for comparison
-        public CameraController(Entity parent, CameraPosition camera) : base(parent) 
+        public CameraController(string parent, CameraPosition camera) : base(parent) 
         {
             this.camera = camera;
             oldState = Mouse.GetState();

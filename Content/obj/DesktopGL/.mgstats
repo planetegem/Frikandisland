@@ -1,2 +1,2 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/effects/FlatShader.fx","C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/bin/DesktopGL/effects/FlatShader.xnb","EffectProcessor","CompiledEffectContent",1441,2598,0,4351488
+"C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/effects/BlankDiffuseShader.fx","C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/bin/DesktopGL/effects/BlankDiffuseShader.xnb","EffectProcessor","CompiledEffectContent",1243,3190,0,3940576

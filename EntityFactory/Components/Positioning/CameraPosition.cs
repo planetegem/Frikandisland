@@ -4,10 +4,10 @@ using System;
 
 namespace EntityFactory.Components.Positioning
 {
-    internal class CameraPosition : Component
+    public class CameraPosition : Component
     {
         // Constructor: set leader as basic positon component
-        public CameraPosition(Entity parent) : base(parent)
+        public CameraPosition(string parent) : base(parent)
         {
             this.leader = new PositionComponent(parent);
         }
@@ -73,7 +73,7 @@ namespace EntityFactory.Components.Positioning
         {
             get
             {
-                return new Vector3(leader.Position, 0);
+                return new Vector3(leader.Position, 1f);
             }
         }
 

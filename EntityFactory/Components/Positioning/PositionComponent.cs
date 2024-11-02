@@ -1,10 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
-using EntityFactory.Entities;
 
 namespace EntityFactory.Components.Positioning
 {
     // PositionComponent keeps track of position and rotation of an entity
-    class PositionComponent : Component
+    public class PositionComponent : Component
     {
         // Positioning of component on the 2D field
         private Vector2 position;
@@ -52,7 +51,7 @@ namespace EntityFactory.Components.Positioning
 
         // Multiple constructors possible:
         // 1. No positioning, everything to default
-        public PositionComponent(Entity parent) : base(parent)
+        public PositionComponent(string parent) : base(parent)
         {
             OffsetZ = 0f;
             Momentum = Vector2.Zero;
@@ -62,7 +61,7 @@ namespace EntityFactory.Components.Positioning
             ResolvePosition();
         }
         // 2. With position, angle optional
-        public PositionComponent(Entity parent, Vector2 position, float angle = 0f) : base(parent)
+        public PositionComponent(string parent, Vector2 position, float angle = 0f) : base(parent)
         {
             OffsetZ = 0f;
             Momentum = Vector2.Zero;
@@ -72,7 +71,7 @@ namespace EntityFactory.Components.Positioning
             ResolvePosition();
         }
         // 3. Only with angle
-        public PositionComponent(Entity parent, float angle) : base(parent)
+        public PositionComponent(string parent, float angle) : base(parent)
         {
             OffsetZ = 0f;
             Momentum = Vector2.Zero;

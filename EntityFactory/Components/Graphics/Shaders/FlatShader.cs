@@ -4,10 +4,10 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace EntityFactory.Components.Graphics
 {
-    internal class FlatShader : ShaderComponent
+    public class FlatShader : ShaderComponent
     {
         public Texture2D texture;
-        public FlatShader(Entity parent, Texture2D texture) : base(parent) 
+        public FlatShader(string parent, Texture2D texture) : base(parent) 
         {
             this.SetEffect("flat");
             this.texture = texture;

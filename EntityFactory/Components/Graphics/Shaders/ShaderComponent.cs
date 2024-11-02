@@ -1,13 +1,13 @@
-﻿using EntityFactory.Entities;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using EntityFactory.Systems;
+using Frikandisland.Systems;
 
 
 namespace EntityFactory.Components.Graphics
 {
-    abstract class ShaderComponent : Component
+    public abstract class ShaderComponent : Component
     {
         protected Effect effect = null;
         public Effect Effect { get { return effect; } }
@@ -23,11 +23,11 @@ namespace EntityFactory.Components.Graphics
             }
             catch (Exception e)
             {
-                System.Diagnostics.Debug.WriteLine($"Could not set shader {effectName} for {parent.id}: {e}");
-                System.Diagnostics.Debug.WriteLine($"Shader for for {parent.id} was not changed.");
+                FrikanLogger.Write($"Could not set shader {effectName} for {parent}: {e}");
+                FrikanLogger.Write($"Shader for for {parent} was not changed.");
             }
         }
-        protected ShaderComponent(Entity parent) : base(parent) { }
+        protected ShaderComponent(string parent) : base(parent) { }
         public abstract void SetParameters(Matrix world, Matrix view, Matrix projection);
     }
 }

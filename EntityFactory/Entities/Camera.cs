@@ -12,8 +12,8 @@ namespace EntityFactory.Entities
         }
         public CameraPosition Construct()
         {
-            CameraPosition positioner = new CameraPosition(this);
-            CameraController controller = new CameraController(this, positioner);
+            CameraPosition positioner = new CameraPosition(this.id);
+            CameraController controller = new CameraController(this.id, positioner);
             return positioner;
         }
     }

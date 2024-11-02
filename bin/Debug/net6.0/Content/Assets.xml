@@ -4,8 +4,9 @@
 	<Effect alias="ambient" location="effects/AmbientShader"></Effect>
 	<Effect alias="transparent" location="effects/TransparentShader"></Effect>
 	<Effect alias="flat" location="effects/FlatShader"></Effect>
-	<Effect alias="normal" location="effects/NormalShader"></Effect>
+	<Effect alias="diffuse" location="effects/DiffuseShader"></Effect>
 	<Effect alias="riemer" location="effects/RiemerShader"></Effect>
+	<Effect alias="blankDiffuse" location="effects/BlankDiffuseShader"></Effect>
 
 	<!--general textures-->
 	<Texture alias="error" location="textures/error"></Texture>

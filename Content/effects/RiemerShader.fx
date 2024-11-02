@@ -17,8 +17,6 @@ float xLightPower;
 float xAmbient;
 
 
-
-
 struct VertexToPixel
 {
     float4 Position     : POSITION;

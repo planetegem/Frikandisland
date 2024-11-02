@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/effects/NormalShader.fx</SourceFile>
-  <SourceTime>2024-08-30T14:15:55.328444+02:00</SourceTime>
-  <DestFile>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/bin/DesktopGL/effects/NormalShader.xnb</DestFile>
-  <DestTime>2024-10-22T17:27:45.435733+02:00</DestTime>
+  <SourceFile>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/effects/DiffuseShader.fx</SourceFile>
+  <SourceTime>2024-11-01T17:04:46.7107785+01:00</SourceTime>
+  <DestFile>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/bin/DesktopGL/Content/effects/DiffuseShader.xnb</DestFile>
+  <DestTime>2024-11-01T17:12:52.0089735+01:00</DestTime>
   <Importer>EffectImporter</Importer>
   <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
   <Processor>EffectProcessor</Processor>

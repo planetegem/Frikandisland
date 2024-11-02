@@ -5,8 +5,9 @@
   <Config />
   <SourceFiles>
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/effects/AmbientShader.fx</File>
+    <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/effects/BlankDiffuseShader.fx</File>
+    <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/effects/DiffuseShader.fx</File>
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/effects/FlatShader.fx</File>
-    <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/effects/NormalShader.fx</File>
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/effects/RiemerShader.fx</File>
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/effects/TransparentShader.fx</File>
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/entities/rossem/rossem_diffuse.png</File>
@@ -27,6 +28,7 @@
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/textures/tile.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

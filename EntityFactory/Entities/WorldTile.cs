@@ -11,15 +11,16 @@ namespace EntityFactory.Entities
         {
             // Position component
             Vector2 pos = new Vector2(x, y);
-            PositionComponent positioner = new PositionComponent(this, pos);
+            PositionComponent positioner = new PositionComponent(this.id, pos);
 
             // Props component: tracks bounds and state
-            TileProps props = new TileProps(this, positioner, !tile);
+            TileProps props = new TileProps(this.id, positioner, !tile);
 
             // Render component
             if (tile)
             {
-                TexturedModel renderer = new TexturedModel(this, positioner, "tile", texture);
+                TexturedModel renderer = new TexturedModel(this.id, "tile", texture);
+                renderer.Positioner = positioner;
             }
 
         }

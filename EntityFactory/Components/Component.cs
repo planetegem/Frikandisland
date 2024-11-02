@@ -6,18 +6,12 @@ namespace EntityFactory.Components
     public abstract class Component
     {
         // Every component keeps track of parent entity
-        public readonly Entity parent;
-        protected Component(Entity parent)
+        public readonly string parent;
+        protected Component(string parent)
         {
             this.parent = parent;
             // And registers itself with the EntitySystem during construction
             EntitySystem.RegisterComponent(this);
-        }
-
-        // Parent ID can be called at any time (mainly for error messages)
-        public string getParentId()
-        {
-            return parent.id;
         }
     }
 }

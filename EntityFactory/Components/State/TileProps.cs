@@ -14,7 +14,7 @@ namespace EntityFactory.Components.State
         // Collision enabled
         public bool collision;
 
-        public TileProps(Entity parent, PositionComponent positioner, bool collision) : base(parent)
+        public TileProps(string parent, PositionComponent positioner, bool collision) : base(parent)
         {
             this.positioner = positioner;
             bounds = new BoundingOrthogonalSquare(positioner.Position, 0.5f);

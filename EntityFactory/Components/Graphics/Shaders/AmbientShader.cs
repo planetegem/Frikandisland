@@ -3,9 +3,9 @@ using Microsoft.Xna.Framework;
 
 namespace EntityFactory.Components.Graphics
 {
-    internal class AmbientShader : ShaderComponent
+    public class AmbientShader : ShaderComponent
     {
-        public AmbientShader(Entity parent) : base(parent)
+        public AmbientShader(string parent) : base(parent)
         {
             this.SetEffect("ambient");
         }

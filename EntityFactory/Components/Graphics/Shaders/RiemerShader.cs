@@ -21,7 +21,7 @@ namespace EntityFactory.Components.Graphics.Shaders
         }
 
 
-        public RiemerShader(Entity parent) : base(parent)
+        public RiemerShader(string parent) : base(parent)
         {
             this.SetEffect("riemer");
             Texture = "rossem";

@@ -32,7 +32,7 @@ namespace EntityFactory.Components.Graphics
         }
 
         // Constructor: extract animations from model
-        public AnimationComponent(Entity parent, Model model) : base(parent)
+        public AnimationComponent(string parent, Model model) : base(parent)
         {
             animations = model.GetAnimations();
         }
@@ -50,7 +50,7 @@ namespace EntityFactory.Components.Graphics
         {
             // First check if animations have been named
             if (animations == null || dictionary.idle == null)
-                throw new Exception($"Warning: animations for {parent.id} were not set");
+                throw new Exception($"Warning: animations for {parent} were not set");
 
             // Check if animation needs to be changed
             if (animationState != brain.state)
@@ -80,7 +80,7 @@ namespace EntityFactory.Components.Graphics
         {
             // First check if animations have been named
             if (animations == null || dictionary.idle == null)
-                throw new Exception($"Warning: animations for {parent.id} were not set");
+                throw new Exception($"Warning: animations for {parent} were not set");
 
             part.UpdateVertices(animations.AnimationTransforms);
         }

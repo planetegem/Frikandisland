@@ -28,17 +28,23 @@
 /processorParam:DebugMode=Auto
 /build:effects/AmbientShader.fx
 
+#begin effects/BlankDiffuseShader.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:effects/BlankDiffuseShader.fx
+
+#begin effects/DiffuseShader.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:effects/DiffuseShader.fx
+
 #begin effects/FlatShader.fx
 /importer:EffectImporter
 /processor:EffectProcessor
 /processorParam:DebugMode=Auto
 /build:effects/FlatShader.fx
-
-#begin effects/NormalShader.fx
-/importer:EffectImporter
-/processor:EffectProcessor
-/processorParam:DebugMode=Auto
-/build:effects/NormalShader.fx
 
 #begin effects/RiemerShader.fx
 /importer:EffectImporter

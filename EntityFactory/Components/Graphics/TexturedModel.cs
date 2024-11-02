@@ -1,9 +1,9 @@
 ﻿using EntityFactory.Components.Positioning;
-using EntityFactory.Entities;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using System;
 using EntityFactory.Systems;
+using Frikandisland.Systems;
 
 namespace EntityFactory.Components.Graphics
 {
@@ -11,58 +11,76 @@ namespace EntityFactory.Components.Graphics
     class TexturedModel : RenderComponent
     {
         // Simple constructor: model & texture have the same name
-        public TexturedModel(Entity parent, PositionComponent positioner, string modelName) : base(parent, positioner)
+        // If not found, default to error
+        public TexturedModel(string parent, string model) : base(parent)
         {
             try
             {
-                model = AssetLoader.GetModel(modelName);
+                this.model = AssetLoader.GetModel(model);
                 try
                 {
-                    texture = AssetLoader.GetTexture(modelName);
-                    shader = new FlatShader(parent, texture);
+                    texture = AssetLoader.GetTexture(model);
                 }
                 catch (Exception e)
                 {
-                    System.Diagnostics.Debug.WriteLine($"Error setting texture for {parent.id}: {e}");
+                    FrikanLogger.Write($"Error setting texture for {parent}: {e}");
                     texture = AssetLoader.GetTexture("error");
-                    shader = new FlatShader(parent, texture);
                 }
             }
             catch (Exception e)
             {
-                System.Diagnostics.Debug.WriteLine($"Error setting model for {parent.id}: {e}");
+                FrikanLogger.Write($"Error setting model for {parent}: {e}");
+                this.model = AssetLoader.GetModel("percolator");
             }
+            shader = new DiffuseShader(parent, texture);
         }
 
         // Constructor with custom texture
-        public TexturedModel(Entity parent, PositionComponent positioner, string modelName, string textureName) : base(parent, positioner)
+        // If not found, default to error
+        public TexturedModel(string parent, string model, string texture) : base(parent)
         {
             try
             {
-                model = AssetLoader.GetModel(modelName);
-
+                this.model = AssetLoader.GetModel(model);
                 try
                 {
-                    texture = AssetLoader.GetTexture(textureName);
-                    shader = new NormalShader(parent, texture);
+                    this.texture = AssetLoader.GetTexture(texture);
                 }
                 catch (Exception e)
                 {
-                    System.Diagnostics.Debug.WriteLine($"Error setting texture for {parent.id}: {e}");
-                    texture = AssetLoader.GetTexture("error");
-                    shader = new FlatShader(parent, texture);
+                    FrikanLogger.Write($"Error setting texture for {parent}: {e}");
+                    this.texture = AssetLoader.GetTexture("error");
                 }
             }
             catch (Exception e)
             {
-                System.Diagnostics.Debug.WriteLine($"Error setting model for {parent.id}: {e}");
+                FrikanLogger.Write($"Error setting model for {parent}: {e}");
+                this.model = AssetLoader.GetModel("percolator");
             }
+            shader = new DiffuseShader(parent, this.texture);
         }
 
+        // main draw function, called every loop
         public override void Draw(Matrix projection, Matrix view)
         {
-            if (model == null) { throw new Exception($"No model loaded when rendering component for {parent.id}"); }
+            // Error logging
+            if (positioner == null)
+            {
+                positioner = new PositionComponent("SimpleModelError");
+                FrikanLogger.Write($"No position found for {parent}: assign a PositionComponent in entity constructor");
+            }
+            if (model == null)
+            {
+                model = AssetLoader.GetModel("percolator");
+                FrikanLogger.Write($"No model loaded when rendering component for {parent}; switching to percolator");
+            }
+            if (texture == null)
+            {
+                texture = AssetLoader.GetTexture("error");
+                FrikanLogger.Write($"No model loaded when rendering component for {parent}; switching to error texture");
+            }
 
+            // Actual draw function
             Matrix world = Matrix.CreateRotationZ(positioner.Angle) * Matrix.CreateTranslation(new Vector3(positioner.Position, positioner.OffsetZ));
             foreach (ModelMesh mesh in model.Meshes)
             {

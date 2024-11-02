@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using Frikandisland.Systems;
 using EntityFactory.Entities;
 using EntityFactory.Systems;
+using EntityFactory.EntityFactory.Components.Input;
 
 namespace EntityFactory
 {
@@ -61,6 +62,9 @@ namespace EntityFactory
 
             // Create world
             world = new World(12, 12, entity);
+
+            // Shader controller
+            ShaderController shader = new ShaderController("shader-controller");
 
             // Camera & perspective
             projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(45), 800f / 480f, 0.1f, 200f);

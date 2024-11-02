@@ -3,9 +3,9 @@ using Microsoft.Xna.Framework;
 
 namespace EntityFactory.Components.Graphics
 {
-    internal class TransparentShader : ShaderComponent
+    public class TransparentShader : ShaderComponent
     {
-        public TransparentShader(Entity parent) : base(parent)
+        public TransparentShader(string parent) : base(parent)
         {
             this.SetEffect("transparent");
             this.transparent = true;

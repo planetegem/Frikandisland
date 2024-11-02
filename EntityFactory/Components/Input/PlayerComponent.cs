@@ -1,18 +1,16 @@
 ﻿using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework;
 using System;
-using EntityFactory.Components.Positioning;
-using EntityFactory.Entities;
 using EntityFactory.Components.State;
 
 namespace EntityFactory.Components.Input
 {
     // SimpleKeyBoard: rotate left & right controlled by keyboard; no mouse = no strafing
-    internal class SimpleKeyboard : InputComponent
+    public class SimpleKeyboard : InputComponent
     {
         private EntityBrain brain;
 
-        public SimpleKeyboard(Entity parent, EntityBrain brain) : base(parent) 
+        public SimpleKeyboard(string parent, EntityBrain brain) : base(parent) 
         { 
             this.brain = brain;
         }
@@ -35,7 +33,7 @@ namespace EntityFactory.Components.Input
         // Update function called during input phase
         public override void Update(GameTime gt)
         {
-            if (positioner == null) throw new Exception($"Error on {parent.id}: link positioner to input component!");
+            if (positioner == null) throw new Exception($"Error on {parent}: link positioner to input component!");
 
             // Get keyboard state
             KeyboardState keyboard = Keyboard.GetState();
