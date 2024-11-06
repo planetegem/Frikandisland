@@ -1,5 +1,4 @@
-﻿using EntityFactory.Components.Positioning;
-using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using System;
 using EntityFactory.Systems;

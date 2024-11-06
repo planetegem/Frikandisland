@@ -38,19 +38,9 @@ namespace EntityFactory.Components.Graphics.Shaders
             {
                 switch (ConfigMaster.shaderLevel)
                 {
-                    case -1:
                     case 0:
                         effect = AssetLoader.GetEffect("ambient");
-                        ambientIntensity = 1f;
-                        break;
-                    case -2:
-                        effect = AssetLoader.GetEffect("blankDiffuse");
-                        ambientIntensity = 0.7f;
-                        break;
-                    case -3:
-                        effect = AssetLoader.GetEffect("blankSpecular");
-                        ambientIntensity = 0.7f;
-                        FrikanLogger.Write("test");
+                        ambientIntensity = 0.6f;
                         break;
                     case 1:
                         effect = AssetLoader.GetEffect("flat");
@@ -58,11 +48,14 @@ namespace EntityFactory.Components.Graphics.Shaders
                         break;
                     case 2:
                         effect = AssetLoader.GetEffect("diffuse");
-                        ambientIntensity = 0.7f;
+                        ambientIntensity = 0.6f;
                         break;
                     case 3:
+                        effect = AssetLoader.GetEffect("multi");
+                        ambientIntensity = 0.35f;
+                        break;
+                    case 4:
                         effect = AssetLoader.GetEffect("specular");
-                        ambientIntensity = 0.7f;
                         break;
                 }
                 ConfigMaster.shaderNeedsUpdate = false;
@@ -76,17 +69,19 @@ namespace EntityFactory.Components.Graphics.Shaders
         }
 
         public Vector4 ambientColor = new Vector4(1f, 1f, 1f, 1f);
-        public float ambientIntensity = 0.8f;
+        public float ambientIntensity = 0.15f;
         public Texture2D texture;
 
-        public Vector4 diffuseColor = new Vector4(1f, 1f, 1f, 1f);
-        public float diffuseIntensity = 0.25f;
-        public Vector3 diffuseDirection = new Vector3(1f, -1f, 2f);
+        public Vector4 diffuseColor = new Vector4(1f, 0.9f, 0.9f, 1f);
+        public float diffuseIntensity = 1f;
+        public Vector3 diffuseDirection = new Vector3(50f, 50f, 100f);
 
-        public float shininess = 20f;
-        public Vector4 specularColor = new Vector4(0.7f, 0.7f, 0.7f, 0.7f);
-        public float specularIntensity = 0.55f;
+        public float fillerIntensity = 0.5f;
+        public float backIntensity = 0.8f;
 
+        public float shininess = 17.5f;
+        public Vector4 specularColor = new Vector4(0.5f, 0.5f, 0.5f, 0.5f);
+        public float specularIntensity = 0.5f;
 
         override public void SetParameters(Matrix world, Matrix view, Vector3 viewVector, Matrix projection)
         {
@@ -115,17 +110,27 @@ namespace EntityFactory.Components.Graphics.Shaders
                 effect.Parameters["ModelTexture"].SetValue(texture);
 
             // Diffuse lighting paremeters
-            if (ConfigMaster.shaderLevel < -1 || ConfigMaster.shaderLevel > 1)
+            if (ConfigMaster.shaderLevel > 1)
             {
+                diffuseDirection.Normalize();
                 effect.Parameters["DiffuseColor"].SetValue(diffuseColor);
                 effect.Parameters["DiffuseIntensity"].SetValue(diffuseIntensity);
                 effect.Parameters["DiffuseLightDirection"].SetValue(diffuseDirection);
-                Matrix worldInverseTransposeMatrix = Matrix.Transpose(Matrix.Invert(world));
-                effect.Parameters["WorldInverseTranspose"].SetValue(worldInverseTransposeMatrix);
             }
 
-            // Specular (test)
-            if (ConfigMaster.shaderLevel < -2 || ConfigMaster.shaderLevel > 2)
+            if (ConfigMaster.shaderLevel > 2)
+            {
+                Vector3 filler = new Vector3(diffuseDirection.X, diffuseDirection.Y, -diffuseDirection.Z);
+                Vector3 back1 = new Vector3(-diffuseDirection.X * 0.66f, -diffuseDirection.Y, 0f);
+                Vector3 back2 = new Vector3(-diffuseDirection.X, -diffuseDirection.Y * 0.66f, 0f);
+                effect.Parameters["FillerLightDirection"].SetValue(filler);
+                effect.Parameters["BackLightDirection"].SetValue(back1);
+                effect.Parameters["BackLightDirection2"].SetValue(back2);
+                effect.Parameters["FillerLightIntensity"].SetValue(fillerIntensity);
+                effect.Parameters["BackLightIntensity"].SetValue(backIntensity);
+            }
+
+            if (ConfigMaster.shaderLevel > 3)
             {
                 effect.Parameters["Shininess"].SetValue(shininess);
                 effect.Parameters["SpecularColor"].SetValue(specularColor);
@@ -133,7 +138,6 @@ namespace EntityFactory.Components.Graphics.Shaders
 
                 viewVector.Normalize();
                 effect.Parameters["ViewVector"].SetValue(viewVector);
-
             }
         }
     }

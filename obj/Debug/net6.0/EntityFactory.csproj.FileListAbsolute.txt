@@ -232,7 +232,6 @@ C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug
 C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\entities\rossem\rossem-animated.xnb
 C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\entities\rossem\blender files\zombo-01_0.xnb
 C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\entities\rossem\zombo-01_0.xnb
-C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\effects\RiemerShader.xnb
 C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\entities\rossem\rossem_new.xnb
 C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\Assets.xml
 C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\entities\zombie\zombo-01.xnb
@@ -243,3 +242,7 @@ C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug
 C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\effects\BlankDiffuseShader.xnb
 C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\effects\BlankSpecularShader.xnb
 C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\effects\SpecularShader.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\entities\rossem\rossem_normals.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\entities\rossem\jpvr-rigged4.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\effects\MultiLightShader.xnb
+C:\Users\niels\OneDrive\Desktop\PLANETEGEM\NetPlayground\Frikandisland\bin\Debug\net6.0\Content\effects\SimpleSpecularShader.xnb

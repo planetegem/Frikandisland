@@ -5,7 +5,6 @@ float4x4 Projection;
 float4 AmbientColor;
 float AmbientIntensity;
 
-float4x4 WorldInverseTranspose;
 float3 DiffuseLightDirection;
 float4 DiffuseColor;
 float DiffuseIntensity;
@@ -30,7 +29,7 @@ VertexShaderOutput VertexShaderFunction(VertexShaderInput input)
     float4 viewPosition = mul(worldPosition, View);
     output.Position = mul(viewPosition, Projection);
 
-    float4 normal = normalize(mul(input.Normal, WorldInverseTranspose));
+    float4 normal = normalize(mul(input.Normal, World));
     float lightIntensity = dot(normal, DiffuseLightDirection);
     output.Color = saturate(DiffuseColor * DiffuseIntensity * lightIntensity);
 

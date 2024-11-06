@@ -3,7 +3,6 @@ using EntityFactory.Components.Graphics.Shaders;
 using EntityFactory.Components.Input;
 using EntityFactory.Components.Positioning;
 using EntityFactory.Components.State;
-using EntityFactory.Systems;
 using Frikandisland.Systems;
 using Frikandisland.Utilities;
 using Microsoft.Xna.Framework;
@@ -31,10 +30,12 @@ namespace EntityFactory.Entities
 
             // Step 3: renderer
             AnimatedModel renderer = new AnimatedModel(this.id, "rossem");
+            
             renderer.ConfigureAnimations(
                 new AnimationDictionary("Armature|Idle", "Armature|Walk", "Armature|Backtrack", "Armature|Run"),
                 brain
             );
+            
             renderer.Shader = new MainShader(this.id, "rossem");
             renderer.Positioner = positioner;
 

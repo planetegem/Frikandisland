@@ -14,7 +14,7 @@ namespace Frikandisland.Systems
             get { return shaderLevel; }
             set 
             { 
-                shaderLevel = Math.Clamp(value, -3, 3);
+                shaderLevel = Math.Clamp(value, 0, 4);
                 shaderNeedsUpdate = true;
 
 

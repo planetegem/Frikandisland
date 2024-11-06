@@ -1,5 +1,4 @@
-﻿using EntityFactory.Entities;
-using EntityFactory.Systems;
+﻿using EntityFactory.Systems;
 using Frikandisland.Systems;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;

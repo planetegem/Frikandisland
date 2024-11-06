@@ -5,7 +5,6 @@ float4x4 Projection;
 float4 AmbientColor;
 float AmbientIntensity;
 
-float4x4 WorldInverseTranspose;
 float3 DiffuseLightDirection;
 float4 DiffuseColor;
 float DiffuseIntensity;
@@ -22,7 +21,7 @@ sampler2D textureSampler = sampler_state {
 struct VertexShaderInput
 {
     float4 Position : POSITION0;
-    float4 Normal : NORMAL0;
+    float3 Normal : NORMAL0;
     float2 TextureCoordinate : TEXCOORD0;
 };
 
@@ -41,7 +40,7 @@ VertexShaderOutput VertexShaderFunction(VertexShaderInput input)
     float4 viewPosition = mul(worldPosition, View);
     output.Position = mul(viewPosition, Projection);
 
-    float4 normal = normalize(mul(input.Normal, WorldInverseTranspose));
+    float4 normal = normalize(mul(input.Normal, World));
     float lightIntensity = dot(normal, DiffuseLightDirection);
     output.Color = saturate(DiffuseColor * DiffuseIntensity * lightIntensity);
 

@@ -52,11 +52,17 @@
 /processorParam:DebugMode=Auto
 /build:effects/FlatShader.fx
 
-#begin effects/RiemerShader.fx
+#begin effects/MultiLightShader.fx
 /importer:EffectImporter
 /processor:EffectProcessor
 /processorParam:DebugMode=Auto
-/build:effects/RiemerShader.fx
+/build:effects/MultiLightShader.fx
+
+#begin effects/SimpleSpecularShader.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:effects/SimpleSpecularShader.fx
 
 #begin effects/SpecularShader.fx
 /importer:EffectImporter
@@ -69,6 +75,30 @@
 /processor:EffectProcessor
 /processorParam:DebugMode=Auto
 /build:effects/TransparentShader.fx
+
+#begin entities/rossem/jpvr-rigged4.fbx
+/importer:FbxImporter
+/processor:CpuAnimatedModelProcessor
+/processorParam:VertexBufferType=DynamicWriteOnly
+/processorParam:IndexBufferType=Default
+/processorParam:MaxBones=72
+/processorParam:GenerateKeyframesFrequency=0
+/processorParam:FixRealBoneRoot=False
+/processorParam:ColorKeyColor=0,0,0,0
+/processorParam:ColorKeyEnabled=True
+/processorParam:DefaultEffect=BasicEffect
+/processorParam:GenerateMipmaps=True
+/processorParam:GenerateTangentFrames=False
+/processorParam:PremultiplyTextureAlpha=True
+/processorParam:PremultiplyVertexColors=True
+/processorParam:ResizeTexturesToPowerOfTwo=False
+/processorParam:RotationX=0
+/processorParam:RotationY=0
+/processorParam:RotationZ=-90
+/processorParam:Scale=0.012
+/processorParam:SwapWindingOrder=False
+/processorParam:TextureFormat=Compressed
+/build:entities/rossem/jpvr-rigged4.fbx
 
 #begin entities/rossem/rossem_diffuse.png
 /importer:TextureImporter
@@ -106,29 +136,36 @@
 /processorParam:TextureFormat=Compressed
 /build:entities/rossem/rossem_new.fbx
 
-#begin entities/rossem/rossem-animated.fbx
+#begin entities/rossem/rossem_normals.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:entities/rossem/rossem_normals.png
+
+#begin entities/rossem/rossem.fbx
 /importer:FbxImporter
-/processor:CpuAnimatedModelProcessor
-/processorParam:VertexBufferType=DynamicWriteOnly
-/processorParam:IndexBufferType=Default
-/processorParam:MaxBones=72
-/processorParam:GenerateKeyframesFrequency=0
-/processorParam:FixRealBoneRoot=False
+/processor:ModelProcessor
 /processorParam:ColorKeyColor=0,0,0,0
 /processorParam:ColorKeyEnabled=True
 /processorParam:DefaultEffect=BasicEffect
 /processorParam:GenerateMipmaps=True
-/processorParam:GenerateTangentFrames=False
+/processorParam:GenerateTangentFrames=True
 /processorParam:PremultiplyTextureAlpha=True
 /processorParam:PremultiplyVertexColors=True
 /processorParam:ResizeTexturesToPowerOfTwo=False
 /processorParam:RotationX=0
 /processorParam:RotationY=0
-/processorParam:RotationZ=-90
-/processorParam:Scale=0.012
+/processorParam:RotationZ=0
+/processorParam:Scale=1
 /processorParam:SwapWindingOrder=False
 /processorParam:TextureFormat=Compressed
-/build:entities/rossem/rossem-animated.fbx;entities/rossem/rossem.fbx
+/build:entities/rossem/rossem.fbx
 
 #begin entities/zombie/zombo-01.png
 /importer:TextureImporter

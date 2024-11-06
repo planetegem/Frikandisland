@@ -5,9 +5,10 @@
 	<Effect alias="transparent" location="effects/TransparentShader"></Effect>
 	<Effect alias="flat" location="effects/FlatShader"></Effect>
 	<Effect alias="diffuse" location="effects/DiffuseShader"></Effect>
-	<Effect alias="riemer" location="effects/RiemerShader"></Effect>
 	<Effect alias="blankDiffuse" location="effects/BlankDiffuseShader"></Effect>
 	<Effect alias="blankSpecular" location="effects/BlankSpecularShader"></Effect>
+	<Effect alias="simpleSpecular" location="effects/SimpleSpecularShader"></Effect>
+	<Effect alias="multi" location="effects/MultiLightShader"></Effect>
 	<Effect alias="specular" location="effects/SpecularShader"></Effect>
 
 
@@ -23,7 +24,9 @@
 
 	<!--rossem-->
 	<Model alias="rossem" location="entities/rossem/rossem_new"></Model>
+	<Model alias="rossem_static" location="entities/rossem/rossem"></Model>
 	<Texture alias="rossem" location="entities/rossem/rossem_diffuse"></Texture>
+	<Texture alias="rossem_normals" location="entities/rossem/rossem_normals"></Texture>
 
 	<!--zombie-->
 	<Model alias="zombie" location="entities/zombie/zombol_rigged"></Model>

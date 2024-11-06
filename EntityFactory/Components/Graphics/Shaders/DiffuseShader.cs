@@ -55,8 +55,7 @@ namespace EntityFactory.Components.Graphics
             effect.Parameters["DiffuseIntensity"].SetValue(diffuseIntensity);
             effect.Parameters["DiffuseLightDirection"].SetValue(diffuseDirection);
 
-            Matrix worldInverseTransposeMatrix = Matrix.Transpose(Matrix.Invert(world));
-            effect.Parameters["WorldInverseTranspose"].SetValue(worldInverseTransposeMatrix);
+            // Texture
             effect.Parameters["ModelTexture"].SetValue(texture);
         }
     }

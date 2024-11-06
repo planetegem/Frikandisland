@@ -22,7 +22,7 @@ namespace EntityFactory.Entities
             AnimatedModel renderer = new AnimatedModel(this.id, "zombie");
             renderer.ConfigureAnimations(new AnimationDictionary("Armature|ArmatureAction"), brain);
             renderer.Positioner = positioner;
-            renderer.Shader = new RiemerShader(this.id);
+            renderer.Shader = new MainShader(this.id);
 
             // Step 3: set input & bounding
             BoundingArea[] bBoxes = new BoundingArea[]{

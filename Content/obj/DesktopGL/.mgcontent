@@ -9,12 +9,15 @@
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/effects/BlankSpecularShader.fx</File>
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/effects/DiffuseShader.fx</File>
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/effects/FlatShader.fx</File>
-    <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/effects/RiemerShader.fx</File>
+    <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/effects/MultiLightShader.fx</File>
+    <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/effects/SimpleSpecularShader.fx</File>
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/effects/SpecularShader.fx</File>
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/effects/TransparentShader.fx</File>
+    <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/entities/rossem/jpvr-rigged4.fbx</File>
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/entities/rossem/rossem_diffuse.png</File>
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/entities/rossem/rossem_new.fbx</File>
-    <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/entities/rossem/rossem-animated.fbx</File>
+    <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/entities/rossem/rossem_normals.png</File>
+    <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/entities/rossem/rossem.fbx</File>
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/entities/zombie/zombo-01.png</File>
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/entities/zombie/zombol_rigged.fbx</File>
     <File>C:/Users/niels/OneDrive/Desktop/PLANETEGEM/NetPlayground/Frikandisland/Content/fonts/coordinateFont.spritefont</File>
@@ -40,7 +43,10 @@
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
-    <File>entities/rossem/rossem.fbx</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
